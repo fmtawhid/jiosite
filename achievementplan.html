@@ -1,0 +1,2051 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jio Industrial</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Your main CSS (replace with your actual CSS file if needed) -->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      body {
+        font-family: "Nunito", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+      }
+      .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #da2128 #f1f1f1;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #da2128;
+        border-radius: 3px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      /* Responsive styles */
+      @media (max-width: 1024px) {
+        .max-w-screen-2xl,
+        .xl\:max-w-screen {
+          max-width: 100vw !important;
+        }
+        .px-\[106px\] {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+        }
+      }
+      @media (max-width: 768px) {
+        nav > div.grid {
+          grid-template-columns: 1fr !important;
+          height: auto !important;
+        }
+        .col-span-9,
+        .col-span-2,
+        .col-span-1 {
+          grid-column: span 12 / span 12 !important;
+        }
+        .pr-4 {
+          padding-right: 1rem !important;
+        }
+        .pr-\[106px\] {
+          padding-right: 1rem !important;
+        }
+        .px-\[106px\] {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+        }
+        footer .grid {
+          grid-template-columns: 1fr !important;
+          height: auto !important;
+        }
+        .col-span-4,
+        .col-span-8 {
+          grid-column: span 12 / span 12 !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- headerArea-start -->
+    <header>
+      <nav
+        class="fixed top-0 left-0 right-0 w-full bg-white shadow-[0.5px_0.5px_0px_#929292] z-50"
+      >
+        <div
+          class="max-w-screen-2xl xl:max-w-screen mx-auto h-[60px] grid grid-cols-12 items-center"
+        >
+          <div
+            class="col-span-1 flex flex-row h-full border border-[#929292] border-t-0 border-b-0 border-l-0 items-center gap-x-3 transition-all duration-150 ease-linear hover:bg-[#F1F1F1] hover:cursor-pointer pl-4 group"
+            id="openMenu"
+          >
+            <div class="flex flex-col gap-y-2">
+              <span
+                class="w-[30px] h-[2px] bg-[#231F5A] transition-all duration-300 ease-linear group-hover:translate-x-[6px]"
+              ></span>
+              <span
+                class="w-[30px] h-[2px] bg-[#231F5A] transition-all duration-300 ease-linear group-hover:translate-x-[-3px] group-hover:bg-[#DA2128]"
+              ></span>
+            </div>
+            <div>
+              <h4 class="font-semibold text-sm text-[#231F5A] uppercase">
+                Menu
+              </h4>
+            </div>
+          </div>
+
+          <div class="col-span-9 flex flex-row gap-x-1 justify-center">
+            <span
+              class="border border-[#929292]/40 border-t-0 border-b-0 border-l-0 h-8 px-3 flex items-center"
+            >
+              <a href="#" class="text-sm font-normal text-[#242424]"
+                >mohsinimamchowdhury@gmail.com</a
+              >
+            </span>
+            <span
+              class="border border-[#929292]/40 border-t-0 border-b-0 border-l-0 h-8 px-3 flex items-center"
+            >
+              <a href="#" class="text-sm font-normal text-[#242424]"
+                >01817074874</a
+              >
+            </span>
+            <span class="h-8 px-3 flex items-center">
+              <a href="" class="text-sm font-normal text-[#242424] capitalize">
+                investors
+              </a>
+            </span>
+          </div>
+
+          <div class="col-span-2 flex flex-row pr-4">
+            <span>
+              <img
+                src="images/profileLogo.jpeg"
+                class="h-full w-full"
+                alt="Profile Logo"
+              />
+            </span>
+          </div>
+        </div>
+
+        <div
+          id="menuOverlay"
+          class="fixed top-0 left-0 right-0 h-full bg-black/50 opacity-0 invisible transition-all duration-300 ease-in-out z-50"
+        >
+          <div
+            class="bg-white w-[300px] fixed h-[100vh] top-0 z-50 p-[30px] -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto custom-scrollbar"
+          >
+            <div
+              class="flex flex-row w-full justify-between items-center cursor-pointer"
+              id="closeMenu"
+            >
+              <div
+                class="flex items-center gap-x-2 text-[#242424] hover:text-[#DA2128] transition-colors duration-200"
+              >
+                <span style="font-size: 1.5rem; color: #da2128">&#10005;</span>
+                <span
+                  class="text-[15px] font-normal uppercase transition-all duration-150 ease-linear hover:text-[#DA2128] text-[#242424]"
+                  >close</span
+                >
+              </div>
+            </div>
+
+                        <div class="flex flex-col mt-4 menu-content">
+              <!-- Overview -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <span
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  id="menuList"
+                  >Overview</span
+                >
+                <div
+                  class="flex flex-col mt-2 gap-y-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0 scale-y-95 origin-top transform menuItems"
+                >
+                  <a
+                    href="index.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Company Overview</span>
+                  </a>
+                  <a
+                    href="brandandproduct.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Brand & Products</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Company Culture -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <span
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  id="menuList"
+                  >Company Culture</span
+                >
+                <div
+                  class="flex flex-col mt-2 gap-y-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0 scale-y-95 origin-top transform menuItems"
+                >
+                  <a
+                    href="boardDirector.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Board of Directors</span>
+                  </a>
+                  
+                  <a
+                    href="news.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>News & Social Activities</span>
+                  </a>
+                  <a
+                    href="culture.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Company Culture</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Present Status -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <span
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  id="menuList"
+                  >Present Status</span
+                >
+                <div
+                  class="flex flex-col mt-2 gap-y-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0 scale-y-95 origin-top transform menuItems"
+                >
+                  <a
+                    href="companystatus.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Company Status</span>
+                  </a>
+                  <a
+                    href="aftersales.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>After Sales Service</span>
+                  </a>
+                  <a
+                    href="presentbusinessstatus.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Present Business Status</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Our Target -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <span
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  id="menuList"
+                  >Our Target</span
+                >
+                <div
+                  class="flex flex-col mt-2 gap-y-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0 scale-y-95 origin-top transform menuItems"
+                >
+                  <a
+                    href="businesstarget.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Business Target</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Achievement Plan -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <span
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  id="menuList"
+                  >Achievement Plan</span
+                >
+                <div
+                  class="flex flex-col mt-2 gap-y-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0 scale-y-95 origin-top transform menuItems"
+                >
+                  <a
+                    href="achievementbusiness.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Achievement of Business</span>
+                  </a>
+                  <a
+                    href="achievementplan.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Achievement Plan</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Conclusion -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <a
+                  href="conclusion.html"
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  >Conclusion</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            // Menu toggle logic
+            const menuItems = document.querySelectorAll(".menu");
+            menuItems.forEach(function (menuItem) {
+              menuItem.addEventListener("click", function (e) {
+                const submenu = this.querySelector(".menuItems");
+                if (submenu) {
+                  e.stopPropagation();
+                  if (submenu.classList.contains("max-h-0")) {
+                    submenu.classList.remove(
+                      "max-h-0",
+                      "opacity-0",
+                      "scale-y-95"
+                    );
+                    submenu.classList.add(
+                      "max-h-[200px]",
+                      "opacity-100",
+                      "scale-y-100"
+                    );
+                  } else {
+                    submenu.classList.add("max-h-0", "opacity-0", "scale-y-95");
+                    submenu.classList.remove(
+                      "max-h-[200px]",
+                      "opacity-100",
+                      "scale-y-100"
+                    );
+                  }
+                }
+              });
+            });
+
+            // Open menu function
+            window.openMenu = function () {
+              const menuOverlay = document.getElementById("menuOverlay");
+              if (menuOverlay) {
+                menuOverlay.classList.remove("opacity-0", "invisible");
+                menuOverlay.classList.add("opacity-100", "visible");
+                const menuPanel = menuOverlay.querySelector(".bg-white");
+                if (menuPanel) {
+                  menuPanel.classList.remove("-translate-x-full");
+                  menuPanel.classList.add("translate-x-0");
+                }
+              }
+            };
+
+            // Close menu function
+            window.closeMenu = function () {
+              const menuOverlay = document.getElementById("menuOverlay");
+              if (menuOverlay) {
+                menuOverlay.classList.remove("opacity-100", "visible");
+                menuOverlay.classList.add("opacity-0", "invisible");
+                const menuPanel = menuOverlay.querySelector(".bg-white");
+                if (menuPanel) {
+                  menuPanel.classList.remove("translate-x-0");
+                  menuPanel.classList.add("-translate-x-full");
+                }
+              }
+            };
+
+            // Close menu when close button is clicked
+            const closeButton = document.getElementById("closeMenu");
+            if (closeButton) {
+              closeButton.addEventListener("click", function () {
+                window.closeMenu();
+              });
+            }
+
+            // Close menu when clicking on menu items with links
+            const menuLinks = document.querySelectorAll(".menuItems a");
+            menuLinks.forEach(function (link) {
+              link.addEventListener("click", function () {
+                window.closeMenu();
+              });
+            });
+
+            // Open menu button
+            const menuButton = document.getElementById("openMenu");
+            if (menuButton) {
+              menuButton.addEventListener("click", function () {
+                if (window.openMenu) {
+                  window.openMenu();
+                }
+              });
+            }
+          });
+        </script>
+      </nav>
+    </header>
+    <!-- headerArea-finish -->
+
+    <!-- mainArea-start -->
+    <main>
+      <!-- Achievement Plan Table -->
+      <section class="mt-[60px] pt-[60px]">
+        <div class="max-w-screen-2xl mx-auto text-center mb-10">
+          <h2 class="text-3xl text-[#34495e] font-bold capitalize">
+            <span class="text-[#27ae60]">Achievement</span> Plan
+          </h2>
+        </div>
+        <div
+          class="max-w-screen-2xl mx-auto grid grid-cols-3 px-10 gap-x-[30px]"
+        >
+          <div class="col-span-2">
+            <div class="overflow-x-auto shadow-md rounded-lg">
+              <table class="min-w-full bg-white">
+                <thead class="bg-[#34495e] text-white">
+                  <tr>
+                    <th
+                      class="py-3 px-4 text-left font-semibold uppercase text-sm"
+                    >
+                      Improvement Area
+                    </th>
+                    <th
+                      class="py-3 px-4 text-center font-semibold uppercase text-sm"
+                    >
+                      2023
+                    </th>
+                    <th
+                      class="py-3 px-4 text-center font-semibold uppercase text-sm"
+                    >
+                      2024
+                    </th>
+                    <th
+                      class="py-3 px-4 text-center font-semibold uppercase text-sm"
+                    >
+                      2025
+                    </th>
+                    <th
+                      class="py-3 px-4 text-center font-semibold uppercase text-sm"
+                    >
+                      2026
+                    </th>
+                    <th
+                      class="py-3 px-4 text-center font-semibold uppercase text-sm"
+                    >
+                      2027
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <td
+                      class="py-3 px-4 border-b border-gray-200 capitalize font-medium"
+                    >
+                      monthly handset sales plan
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      46k
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      82k
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      115k
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      165k
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      230k
+                    </td>
+                  </tr>
+                  <tr class="bg-white hover:bg-gray-100 transition-colors">
+                    <td
+                      class="py-3 px-4 border-b border-gray-200 capitalize font-medium"
+                    >
+                      handset sales manpower
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      32
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      38
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      45
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      55
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      60
+                    </td>
+                  </tr>
+                  <tr class="bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <td
+                      class="py-3 px-4 border-b border-gray-200 capitalize font-medium"
+                    >
+                      production manpower
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      48
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      80
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      95
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      150
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      220
+                    </td>
+                  </tr>
+                  <tr class="bg-white hover:bg-gray-100 transition-colors">
+                    <td
+                      class="py-3 px-4 border-b border-gray-200 capitalize font-medium"
+                    >
+                      Potential Cell Phone Dealer Coverage
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      20
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      28
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      35
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      40
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      52
+                    </td>
+                  </tr>
+                  <tr class="bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <td
+                      class="py-3 px-4 border-b border-gray-200 capitalize font-medium"
+                    >
+                      Potential Cell Phone Retail Coverage
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      10k
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      12k
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      15k
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      18k
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      22k
+                    </td>
+                  </tr>
+                  <tr class="bg-white hover:bg-gray-100 transition-colors">
+                    <td
+                      class="py-3 px-4 border-b border-gray-200 capitalize font-medium"
+                    >
+                      Service Center Increment
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      30
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      32
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      35
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      38
+                    </td>
+                    <td class="py-3 px-4 border-b border-gray-200 text-center">
+                      40
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="flex flex-col gap-y-10">
+            <div class="w-full">
+              <div class="w-[50%]">
+                <h3 class="text-2xl text-[#3498db] font-bold">2027</h3>
+                <p class="text-base text-[#34495e] font-normal">
+                  we will sale
+                  <span class="text-xl font-bold text-amber-400">2.3 lac</span>
+                  Pcs handsets per month
+                </p>
+              </div>
+            </div>
+            <div class="w-full flex justify-end">
+              <div class="w-[50%]">
+                <h3 class="text-2xl text-[#3498db] font-bold">2023</h3>
+                <p class="text-base text-[#34495e] font-normal">
+                  Our journey have started with
+                  <span class="text-xl font-bold text-amber-400">46k</span>
+                  handset sales per month
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Factory Building & SVG Shapes -->
+      <section class="py-12">
+        <div class="max-w-screen-2xl mx-auto relative">
+          <div class="flex justify-center">
+            <div class="relative w-2/3">
+              <img
+                src="images/building.jpg"
+                alt="Factory Building"
+                class="w-full rounded-lg shadow-lg"
+              />
+              <!-- SVG shape at top right corner -->
+              <div class="absolute -top-32 -right-32 w-[28rem] h-[28rem]">
+                <svg
+                  viewBox="0 0 200 200"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-full h-full"
+                >
+                  <path
+                    fill="#3498db"
+                    d="M48.8,-59.2C62.8,-49.2,73.8,-33.8,76.9,-17.1C80,0,75.1,18.4,65.3,32.6C55.5,46.8,40.8,56.8,24.4,64.3C8,71.8,-10.1,76.8,-26.8,72.6C-43.5,68.4,-58.8,55,-67.8,38.5C-76.8,22,-79.5,2.3,-74.8,-15.2C-70.1,-32.7,-58,-48,-43.4,-58C-28.8,-68,-14.4,-72.7,1.2,-74.1C16.8,-75.6,33.6,-73.8,48.8,-59.2Z"
+                    transform="translate(100 100)"
+                  />
+                </svg>
+                <div
+                  class="absolute inset-0 flex flex-col justify-center items-center p-16"
+                >
+                  <p class="text-white text-sm mb-2 text-center">
+                    To make our plan successful
+                  </p>
+                  <h3 class="text-white text-xl font-bold text-center">
+                    We have established our own factory building at Narayanganj
+                  </h3>
+                </div>
+              </div>
+              <!-- Bottom left shape - 10 storied building -->
+              <div class="absolute -bottom-16 -left-16 w-64 h-64">
+                <svg
+                  viewBox="0 0 200 200"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-full h-full"
+                >
+                  <path
+                    fill="#e74c3c"
+                    d="M39.9,-46.8C52.6,-34.9,64.4,-23.4,68.2,-9.2C72,5,67.8,22,58.1,34.8C48.4,47.7,33.3,56.4,16.9,61.5C0.5,66.6,-17.2,68.1,-32.1,62C-47,55.9,-59.1,42.2,-65.2,26.2C-71.3,10.2,-71.4,-8.1,-64.3,-22.7C-57.2,-37.3,-42.9,-48.2,-28.7,-59.5C-14.5,-70.8,-0.3,-82.5,11.9,-79.9C24.1,-77.3,27.2,-58.6,39.9,-46.8Z"
+                    transform="translate(100 100)"
+                  />
+                </svg>
+                <div
+                  class="absolute inset-0 flex flex-col justify-center items-center p-8"
+                >
+                  <h3 class="text-white text-xl font-bold text-center">
+                    Own 10 Storied Building
+                  </h3>
+                </div>
+              </div>
+              <!-- Bottom right shape - 45k sqft production space -->
+              <div class="absolute -bottom-12 -right-12 w-56 h-56">
+                <svg
+                  viewBox="0 0 200 200"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-full h-full"
+                >
+                  <path
+                    fill="#2ecc71"
+                    d="M47.7,-57.2C59.5,-45.9,65.8,-29.1,68.2,-12.1C70.6,4.9,69.1,22.1,60.5,35.1C51.9,48.1,36.2,56.9,19.2,63.3C2.3,69.7,-15.9,73.7,-31.7,68.5C-47.5,63.3,-60.9,48.9,-67.4,31.8C-73.9,14.7,-73.5,-5,-67.1,-22.1C-60.7,-39.1,-48.3,-53.5,-34,-62.1C-19.7,-70.7,-3.5,-73.5,12.2,-70.1C27.9,-66.7,35.9,-68.5,47.7,-57.2Z"
+                    transform="translate(100 100)"
+                  />
+                </svg>
+                <div
+                  class="absolute inset-0 flex flex-col justify-center items-center p-8"
+                >
+                  <h3 class="text-white text-xl font-bold text-center">
+                    45k Sqft Production Space
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--  Capacity -->
+      <section class="py-12 bg-gray-50">
+        <div class="max-w-screen-2xl mx-auto px-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- Facility Features Timeline -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+              <div class="relative">
+                <div
+                  class="absolute left-8 top-0 bottom-0 w-1 bg-gray-200"
+                ></div>
+                <!-- Item 1 -->
+                <div class="flex mb-8 relative">
+                  <div
+                    class="w-16 h-16 rounded-full flex items-center justify-center z-10 mr-6"
+                    style="background-color: #e74c3c"
+                  >
+                    <!-- SVG factory icon -->
+                    <svg
+                      class="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <rect
+                        x="3"
+                        y="11"
+                        width="18"
+                        height="10"
+                        rx="2"
+                        fill="white"
+                        stroke="none"
+                      />
+                      <path
+                        d="M3 21V7l6 5V7l6 5V7l6 5"
+                        stroke="#e74c3c"
+                        stroke-width="2"
+                        fill="none"
+                      />
+                    </svg>
+                  </div>
+                  <div class="bg-white rounded-lg shadow-sm p-4 flex-1">
+                    <h4
+                      class="text-lg font-semibold capitalize mb-2 text-[#e74c3c]"
+                    >
+                      SMT Line
+                    </h4>
+                    <p class="text-gray-700">
+                      We have established a state-of-the-art SMT line with
+                      capacity of 40k units per day.
+                    </p>
+                  </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="flex mb-8 relative">
+                  <div
+                    class="w-16 h-16 rounded-full flex items-center justify-center z-10 mr-6"
+                    style="background-color: #2ecc71"
+                  >
+                    <svg
+                      class="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <rect
+                        x="3"
+                        y="11"
+                        width="18"
+                        height="10"
+                        rx="2"
+                        fill="white"
+                        stroke="none"
+                      />
+                      <path
+                        d="M3 21V7l6 5V7l6 5V7l6 5"
+                        stroke="#2ecc71"
+                        stroke-width="2"
+                        fill="none"
+                      />
+                    </svg>
+                  </div>
+                  <div class="bg-white rounded-lg shadow-sm p-4 flex-1">
+                    <h4
+                      class="text-lg font-semibold capitalize mb-2 text-[#2ecc71]"
+                    >
+                      Assembly Line
+                    </h4>
+                    <p class="text-gray-700">
+                      Our assembly line can handle up to 30k feature phones and
+                      10k smartphones daily.
+                    </p>
+                  </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="flex mb-8 relative">
+                  <div
+                    class="w-16 h-16 rounded-full flex items-center justify-center z-10 mr-6"
+                    style="background-color: #f39c12"
+                  >
+                    <svg
+                      class="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        fill="white"
+                        stroke="none"
+                      />
+                      <path
+                        d="M8 12h8M12 8v8"
+                        stroke="#f39c12"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                  <div class="bg-white rounded-lg shadow-sm p-4 flex-1">
+                    <h4
+                      class="text-lg font-semibold capitalize mb-2 text-[#f39c12]"
+                    >
+                      Testing Facility
+                    </h4>
+                    <p class="text-gray-700">
+                      Comprehensive testing facility with automated and manual
+                      testing procedures.
+                    </p>
+                  </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="flex relative">
+                  <div
+                    class="w-16 h-16 rounded-full flex items-center justify-center z-10 mr-6"
+                    style="background-color: #9b59b6"
+                  >
+                    <svg
+                      class="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <rect
+                        x="3"
+                        y="11"
+                        width="18"
+                        height="10"
+                        rx="2"
+                        fill="white"
+                        stroke="none"
+                      />
+                      <path
+                        d="M3 21V7l6 5V7l6 5V7l6 5"
+                        stroke="#9b59b6"
+                        stroke-width="2"
+                        fill="none"
+                      />
+                    </svg>
+                  </div>
+                  <div class="bg-white rounded-lg shadow-sm p-4 flex-1">
+                    <h4
+                      class="text-lg font-semibold capitalize mb-2 text-[#9b59b6]"
+                    >
+                      Packaging
+                    </h4>
+                    <p class="text-gray-700">
+                      Modern packaging facility with capacity matching our
+                      production lines.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Capacity Table -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <h3 class="text-xl font-bold text-[#3498db] p-6 capitalize">
+                Factory Facility & Production Capacity
+              </h3>
+              <div class="overflow-x-auto">
+                <table class="min-w-full">
+                  <thead class="bg-[#34495e] text-white">
+                    <tr>
+                      <th
+                        class="py-3 px-4 text-left font-semibold uppercase text-sm"
+                      >
+                        Particulars
+                      </th>
+                      <th
+                        class="py-3 px-4 text-center font-semibold uppercase text-sm"
+                      >
+                        Current
+                      </th>
+                      <th
+                        class="py-3 px-4 text-center font-semibold uppercase text-sm"
+                      >
+                        Possible Expansion
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="bg-gray-50 hover:bg-gray-100 transition-colors">
+                      <td
+                        class="py-3 px-4 border-b border-gray-200 capitalize font-medium"
+                      >
+                        SMT Line Capacity
+                      </td>
+                      <td
+                        class="py-3 px-4 border-b border-gray-200 text-center"
+                      >
+                        40k units/day
+                      </td>
+                      <td
+                        class="py-3 px-4 border-b border-gray-200 text-center"
+                      >
+                        80k units/day
+                      </td>
+                    </tr>
+                    <tr class="bg-white hover:bg-gray-100 transition-colors">
+                      <td
+                        class="py-3 px-4 border-b border-gray-200 capitalize font-medium"
+                      >
+                        Feature Phone Assembly
+                      </td>
+                      <td
+                        class="py-3 px-4 border-b border-gray-200 text-center"
+                      >
+                        30k units/day
+                      </td>
+                      <td
+                        class="py-3 px-4 border-b border-gray-200 text-center"
+                      >
+                        60k units/day
+                      </td>
+                    </tr>
+                    <tr class="bg-gray-50 hover:bg-gray-100 transition-colors">
+                      <td
+                        class="py-3 px-4 border-b border-gray-200 capitalize font-medium"
+                      >
+                        Smartphone Assembly
+                      </td>
+                      <td
+                        class="py-3 px-4 border-b border-gray-200 text-center"
+                      >
+                        10k units/day
+                      </td>
+                      <td
+                        class="py-3 px-4 border-b border-gray-200 text-center"
+                      >
+                        30k units/day
+                      </td>
+                    </tr>
+                    <tr class="bg-white hover:bg-gray-100 transition-colors">
+                      <td
+                        class="py-3 px-4 border-b border-gray-200 capitalize font-medium"
+                      >
+                        Testing Capacity
+                      </td>
+                      <td
+                        class="py-3 px-4 border-b border-gray-200 text-center"
+                      >
+                        45k units/day
+                      </td>
+                      <td
+                        class="py-3 px-4 border-b border-gray-200 text-center"
+                      >
+                        100k units/day
+                      </td>
+                    </tr>
+                    <tr class="bg-gray-50 hover:bg-gray-100 transition-colors">
+                      <td
+                        class="py-3 px-4 border-b border-gray-200 capitalize font-medium"
+                      >
+                        Packaging Capacity
+                      </td>
+                      <td
+                        class="py-3 px-4 border-b border-gray-200 text-center"
+                      >
+                        50k units/day
+                      </td>
+                      <td
+                        class="py-3 px-4 border-b border-gray-200 text-center"
+                      >
+                        120k units/day
+                      </td>
+                    </tr>
+                    <tr class="bg-white hover:bg-gray-100 transition-colors">
+                      <td
+                        class="py-3 px-4 border-b border-gray-200 capitalize font-medium"
+                      >
+                        Quality Control
+                      </td>
+                      <td
+                        class="py-3 px-4 border-b border-gray-200 text-center"
+                      >
+                        100%
+                      </td>
+                      <td
+                        class="py-3 px-4 border-b border-gray-200 text-center"
+                      >
+                        100%
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Assembly System and Software Tool -->
+      <section class="py-12">
+        <div class="max-w-screen-2xl mx-auto text-center">
+          <h2 class="text-xl text-[#34495e] capitalize font-bold">
+            Assembly System and software tool
+          </h2>
+          <div>
+            <p class="text-base text-[#34495e] capitalize font-normal">
+              The production matches the
+              <span class="font-bold text-xl text-amber-400">MES</span> system,
+              the production slider has a display kanban, and the kanban
+              displays the production status in real time.
+            </p>
+          </div>
+        </div>
+        <div
+          class="max-w-screen-2xl mx-auto flex flex-wrap justify-center gap-4 mt-8 mb-12"
+        >
+          <div
+            class="bg-[#3498db] text-white px-6 py-3 rounded-full shadow-md hover:bg-[#2980b9] transition-colors"
+          >
+            Basic Data
+          </div>
+          <div
+            class="bg-[#3498db] text-white px-6 py-3 rounded-full shadow-md hover:bg-[#2980b9] transition-colors"
+          >
+            Order Management
+          </div>
+          <div
+            class="bg-[#3498db] text-white px-6 py-3 rounded-full shadow-md hover:bg-[#2980b9] transition-colors"
+          >
+            QA Management
+          </div>
+          <div
+            class="bg-[#3498db] text-white px-6 py-3 rounded-full shadow-md hover:bg-[#2980b9] transition-colors"
+          >
+            Rework/Repair
+          </div>
+          <div
+            class="bg-[#3498db] text-white px-6 py-3 rounded-full shadow-md hover:bg-[#2980b9] transition-colors"
+          >
+            Kanban
+          </div>
+        </div>
+        <div class="max-w-screen-2xl mx-auto mt-12 px-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- SMT Process -->
+            <div
+              class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+            >
+              <div
+                class="p-4 text-white font-bold text-xl"
+                style="background-color: #e74c3c"
+              >
+                SMT Process
+              </div>
+              <div class="p-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #e74c3c"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #e74c3c"
+                    ></div>
+                    <span class="text-gray-700">Scan materiel to line</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #e74c3c"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #e74c3c"
+                    ></div>
+                    <span class="text-gray-700">First article inspection</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #e74c3c"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #e74c3c"
+                    ></div>
+                    <span class="text-gray-700">Material binding feeder</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #e74c3c"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #e74c3c"
+                    ></div>
+                    <span class="text-gray-700">Visual examination</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #e74c3c"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #e74c3c"
+                    ></div>
+                    <span class="text-gray-700">Soft Downloads</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #e74c3c"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #e74c3c"
+                    ></div>
+                    <span class="text-gray-700">Calibration Test</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #e74c3c"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #e74c3c"
+                    ></div>
+                    <span class="text-gray-700">Complete analyses</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #e74c3c"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #e74c3c"
+                    ></div>
+                    <span class="text-gray-700">SMT finished scan</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Assembly Process -->
+            <div
+              class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+            >
+              <div
+                class="p-4 text-white font-bold text-xl"
+                style="background-color: #2ecc71"
+              >
+                Assembly Process
+              </div>
+              <div class="p-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #2ecc71"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #2ecc71"
+                    ></div>
+                    <span class="text-gray-700">Scan PCBA to line</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #2ecc71"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #2ecc71"
+                    ></div>
+                    <span class="text-gray-700">Material binding</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #2ecc71"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #2ecc71"
+                    ></div>
+                    <span class="text-gray-700">MMI Testing</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #2ecc71"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #2ecc71"
+                    ></div>
+                    <span class="text-gray-700">ATE Test</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #2ecc71"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #2ecc71"
+                    ></div>
+                    <span class="text-gray-700">QC full Test</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Packing Process -->
+            <div
+              class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 md:col-span-2"
+            >
+              <div
+                class="p-4 text-white font-bold text-xl"
+                style="background-color: #f39c12"
+              >
+                Packing Process
+              </div>
+              <div class="p-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #f39c12"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #f39c12"
+                    ></div>
+                    <span class="text-gray-700">Print label</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #f39c12"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #f39c12"
+                    ></div>
+                    <span class="text-gray-700">Write Imei</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #f39c12"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #f39c12"
+                    ></div>
+                    <span class="text-gray-700">Part binding</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #f39c12"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #f39c12"
+                    ></div>
+                    <span class="text-gray-700">Print box label</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #f39c12"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #f39c12"
+                    ></div>
+                    <span class="text-gray-700">Check parts</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #f39c12"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #f39c12"
+                    ></div>
+                    <span class="text-gray-700">Box weight check</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #f39c12"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #f39c12"
+                    ></div>
+                    <span class="text-gray-700">Check in carton box</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #f39c12"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #f39c12"
+                    ></div>
+                    <span class="text-gray-700">Check in pallent</span>
+                  </div>
+                  <div
+                    class="flex items-center p-3 bg-gray-50 rounded border-l-4"
+                    style="border-color: #f39c12"
+                  >
+                    <div
+                      class="w-2 h-2 rounded-full mr-3"
+                      style="background-color: #f39c12"
+                    ></div>
+                    <span class="text-gray-700">Shipments Scan</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Laboratory Facility -->
+      <section class="py-12 bg-gray-50">
+        <div class="max-w-screen-2xl mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center text-[#34495e] mb-8">
+            Laboratory Facility
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div
+              class="col-span-1 md:col-span-2 bg-white p-6 rounded-lg shadow-md"
+            >
+              <h4 class="text-xl font-semibold text-[#3498db] mb-3 capitalize">
+                Perfect Lab Environment
+              </h4>
+              <p class="text-gray-700 mb-4">
+                We have inaugurated world class LAB environment in terms of
+                humidity, temperature, sound, light & Dust free.
+              </p>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src="images/laboratory1.jpg"
+                alt="Laboratory Environment"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src="images/laboratory2.png"
+                alt="Laboratory Equipment"
+                class="w-full h-64 object-cover"
+              />
+            </div>
+            <div
+              class="col-span-1 md:col-span-2 bg-white p-6 rounded-lg shadow-md"
+            >
+              <h4 class="text-xl font-semibold text-[#3498db] mb-3 capitalize">
+                All Equipment's Availability
+              </h4>
+              <p class="text-gray-700 mb-4">
+                We are arranging all required machinery & equipment's as per
+                BTRC & NBR Guideline.
+              </p>
+            </div>
+            <div class="col-span-1 md:col-span-3 mt-6">
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img
+                  src="images/laboratory3.png"
+                  alt="Laboratory Panorama"
+                  class="w-full h-80 object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Laboratory Equipment Gallery Tabs -->
+      <section class="py-12 bg-gray-50">
+        <div class="max-w-screen-2xl mx-auto px-10">
+          <h2 class="text-3xl font-bold text-center text-[#34495e] mb-8">
+            Laboratory Equipment Gallery
+          </h2>
+          <div class="flex flex-wrap justify-center mb-8">
+            <button
+              class="tab-button px-6 py-3 m-2 rounded-full font-medium capitalize transition-all duration-300 focus:outline-none bg-[#e74c3c] text-white"
+              data-tab="tab-0"
+            >
+              reliability test lab
+            </button>
+            <button
+              class="tab-button px-6 py-3 m-2 rounded-full font-medium capitalize transition-all duration-300 focus:outline-none bg-[rgba(0,0,0,0.05)] text-[#333]"
+              data-tab="tab-1"
+            >
+              battery test lab
+            </button>
+            <button
+              class="tab-button px-6 py-3 m-2 rounded-full font-medium capitalize transition-all duration-300 focus:outline-none bg-[rgba(0,0,0,0.05)] text-[#333]"
+              data-tab="tab-2"
+            >
+              accessories test lab
+            </button>
+            <button
+              class="tab-button px-6 py-3 m-2 rounded-full font-medium capitalize transition-all duration-300 focus:outline-none bg-[rgba(0,0,0,0.05)] text-[#333]"
+              data-tab="tab-3"
+            >
+              rf test lab
+            </button>
+          </div>
+          <!-- Tab Contents -->
+          <div id="tab-0" class="tab-content block mb-8">
+            <div class="flex items-center mb-6">
+              <div
+                class="w-12 h-12 rounded-full flex items-center justify-center mr-4 bg-[#e74c3c]"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold capitalize text-[#e74c3c]">
+                Reliability Test Lab
+              </h3>
+            </div>
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+            >
+              <div
+                class="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              >
+                <div class="h-48 overflow-hidden">
+                  <img
+                    src="images/reliability1.jpg"
+                    alt="Handset Controlling Drop Tester"
+                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                </div>
+                <div class="p-4">
+                  <h4 class="text-sm font-medium capitalize text-gray-800">
+                    Handset Controlling Drop Tester
+                  </h4>
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              >
+                <div class="h-48 overflow-hidden">
+                  <img
+                    src="images/reliability2.png"
+                    alt="Button Life Tester"
+                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                </div>
+                <div class="p-4">
+                  <h4 class="text-sm font-medium capitalize text-gray-800">
+                    Button Life Tester
+                  </h4>
+                </div>
+              </div>
+              <!-- Add more items as needed -->
+            </div>
+          </div>
+          <div id="tab-1" class="tab-content hidden mb-8">
+            <div class="flex items-center mb-6">
+              <div
+                class="w-12 h-12 rounded-full flex items-center justify-center mr-4 bg-[#3498db]"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold capitalize text-[#3498db]">
+                Battery Test Lab
+              </h3>
+            </div>
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+            >
+              <div
+                class="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              >
+                <div class="h-48 overflow-hidden">
+                  <img
+                    src="images/battery1.jpg"
+                    alt="Battery Cycle Tester"
+                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                </div>
+                <div class="p-4">
+                  <h4 class="text-sm font-medium capitalize text-gray-800">
+                    Battery Cycle Tester
+                  </h4>
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              >
+                <div class="h-48 overflow-hidden">
+                  <img
+                    src="images/battery2.jpg"
+                    alt="Battery Capacity Analyzer"
+                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                </div>
+                <div class="p-4">
+                  <h4 class="text-sm font-medium capitalize text-gray-800">
+                    Battery Capacity Analyzer
+                  </h4>
+                </div>
+              </div>
+              <!-- Add more items as needed -->
+            </div>
+          </div>
+          <div id="tab-2" class="tab-content hidden mb-8">
+            <div class="flex items-center mb-6">
+              <div
+                class="w-12 h-12 rounded-full flex items-center justify-center mr-4 bg-[#2ecc71]"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold capitalize text-[#2ecc71]">
+                Accessories Test Lab
+              </h3>
+            </div>
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+            >
+              <div
+                class="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              >
+                <div class="h-48 overflow-hidden">
+                  <img
+                    src="images/acc1.jpg"
+                    alt="Charger Tester"
+                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                </div>
+                <div class="p-4">
+                  <h4 class="text-sm font-medium capitalize text-gray-800">
+                    Charger Tester
+                  </h4>
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              >
+                <div class="h-48 overflow-hidden">
+                  <img
+                    src="images/acc2.jpg"
+                    alt="Earphone Tester"
+                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                </div>
+                <div class="p-4">
+                  <h4 class="text-sm font-medium capitalize text-gray-800">
+                    Earphone Tester
+                  </h4>
+                </div>
+              </div>
+              <!-- Add more items as needed -->
+            </div>
+          </div>
+          <div id="tab-3" class="tab-content hidden mb-8">
+            <div class="flex items-center mb-6">
+              <div
+                class="w-12 h-12 rounded-full flex items-center justify-center mr-4 bg-[#f39c12]"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold capitalize text-[#f39c12]">
+                RF Test Lab
+              </h3>
+            </div>
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+            >
+              <div
+                class="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              >
+                <div class="h-48 overflow-hidden">
+                  <img
+                    src="images/rf1.jpg"
+                    alt="RF Signal Analyzer"
+                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                </div>
+                <div class="p-4">
+                  <h4 class="text-sm font-medium capitalize text-gray-800">
+                    RF Signal Analyzer
+                  </h4>
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              >
+                <div class="h-48 overflow-hidden">
+                  <img
+                    src="images/rf2.jpg"
+                    alt="Spectrum Analyzer"
+                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                </div>
+                <div class="p-4">
+                  <h4 class="text-sm font-medium capitalize text-gray-800">
+                    Spectrum Analyzer
+                  </h4>
+                </div>
+              </div>
+              <!-- Add more items as needed -->
+            </div>
+          </div>
+        </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const tabButtons = document.querySelectorAll(".tab-button");
+            const tabContents = document.querySelectorAll(".tab-content");
+            const categoryColors = ["#e74c3c", "#3498db", "#2ecc71", "#f39c12"];
+            tabButtons.forEach((button, idx) => {
+              button.addEventListener("click", function () {
+                tabContents.forEach((content) => {
+                  content.classList.add("hidden");
+                  content.classList.remove("block");
+                });
+                document
+                  .getElementById(this.getAttribute("data-tab"))
+                  .classList.remove("hidden");
+                document
+                  .getElementById(this.getAttribute("data-tab"))
+                  .classList.add("block");
+                tabButtons.forEach((btn, i) => {
+                  btn.style.backgroundColor = "rgba(0,0,0,0.05)";
+                  btn.style.color = "#333";
+                });
+                this.style.backgroundColor =
+                  categoryColors[idx % categoryColors.length];
+                this.style.color = "white";
+              });
+            });
+          });
+        </script>
+      </section>
+      <!-- Main lab testing as per quality checking -->
+      <section class="py-10">
+        <div class="max-w-screen-2xl mx-auto text-center mb-8">
+          <h2 class="text-3xl font-bold text-[#231F5A]">
+            Main lab testing as per quality checking
+          </h2>
+        </div>
+        <div class="max-w-screen-2xl mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Example Card 1 -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+            >
+              <div class="p-6">
+                <div
+                  class="w-16 h-16 mx-auto mb-4 text-[#DA2128] flex items-center justify-center"
+                >
+                  <!-- SVG icon placeholder -->
+                  <svg
+                    class="w-full h-full"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="#DA2128"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M8 12h8M12 8v8"
+                      stroke="#DA2128"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="text-xl font-bold text-[#231F5A] mb-4 text-center capitalize"
+                >
+                  pressure test
+                </h3>
+                <p class="text-gray-700 text-center">
+                  to dial 1000 times phone call continuously on the automatic
+                  test software, if there is a problem, we must rewrite relevant
+                  softwares
+                </p>
+              </div>
+            </div>
+            <!-- Example Card 2 -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+            >
+              <div class="p-6">
+                <div
+                  class="w-16 h-16 mx-auto mb-4 text-[#DA2128] flex items-center justify-center"
+                >
+                  <svg
+                    class="w-full h-full"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <rect
+                      x="4"
+                      y="4"
+                      width="16"
+                      height="16"
+                      rx="4"
+                      stroke="#DA2128"
+                      stroke-width="2"
+                    />
+                    <path d="M8 12h8" stroke="#DA2128" stroke-width="2" />
+                  </svg>
+                </div>
+                <h3
+                  class="text-xl font-bold text-[#231F5A] mb-4 text-center capitalize"
+                >
+                  anti-drop test
+                </h3>
+                <p class="text-gray-700 text-center">
+                  anti-drop test is conducted by special PPRT reliability lab.
+                  0.5m drop test must be done 300 times for per surface, 2m drop
+                  test must be done 1 time for per surface
+                </p>
+              </div>
+            </div>
+            <!-- Example Card 3 -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+            >
+              <div class="p-6">
+                <div
+                  class="w-16 h-16 mx-auto mb-4 text-[#DA2128] flex items-center justify-center"
+                >
+                  <svg
+                    class="w-full h-full"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M4 17h16M4 12h16M4 7h16"
+                      stroke="#DA2128"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="text-xl font-bold text-[#231F5A] mb-4 text-center capitalize"
+                >
+                  high/low temperature test
+                </h3>
+                <p class="text-gray-700 text-center">
+                  let the phone different temperature to test the adaptability
+                  of the phone. Low temperature is generally in the minus 20
+                  degree celcius, high temperature is at around 80 degree
+                  celecius
+                </p>
+              </div>
+            </div>
+            <!-- Example Card 1 -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+            >
+              <div class="p-6">
+                <div
+                  class="w-16 h-16 mx-auto mb-4 text-[#DA2128] flex items-center justify-center"
+                >
+                  <!-- SVG icon placeholder -->
+                  <svg
+                    class="w-full h-full"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="#DA2128"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M8 12h8M12 8v8"
+                      stroke="#DA2128"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="text-xl font-bold text-[#231F5A] mb-4 text-center capitalize"
+                >
+                  pressure test
+                </h3>
+                <p class="text-gray-700 text-center">
+                  to dial 1000 times phone call continuously on the automatic
+                  test software, if there is a problem, we must rewrite relevant
+                  softwares
+                </p>
+              </div>
+            </div>
+            <!-- Example Card 2 -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+            >
+              <div class="p-6">
+                <div
+                  class="w-16 h-16 mx-auto mb-4 text-[#DA2128] flex items-center justify-center"
+                >
+                  <svg
+                    class="w-full h-full"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <rect
+                      x="4"
+                      y="4"
+                      width="16"
+                      height="16"
+                      rx="4"
+                      stroke="#DA2128"
+                      stroke-width="2"
+                    />
+                    <path d="M8 12h8" stroke="#DA2128" stroke-width="2" />
+                  </svg>
+                </div>
+                <h3
+                  class="text-xl font-bold text-[#231F5A] mb-4 text-center capitalize"
+                >
+                  anti-drop test
+                </h3>
+                <p class="text-gray-700 text-center">
+                  anti-drop test is conducted by special PPRT reliability lab.
+                  0.5m drop test must be done 300 times for per surface, 2m drop
+                  test must be done 1 time for per surface
+                </p>
+              </div>
+            </div>
+            <!-- Example Card 3 -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+            >
+              <div class="p-6">
+                <div
+                  class="w-16 h-16 mx-auto mb-4 text-[#DA2128] flex items-center justify-center"
+                >
+                  <svg
+                    class="w-full h-full"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M4 17h16M4 12h16M4 7h16"
+                      stroke="#DA2128"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="text-xl font-bold text-[#231F5A] mb-4 text-center capitalize"
+                >
+                  high/low temperature test
+                </h3>
+                <p class="text-gray-700 text-center">
+                  let the phone different temperature to test the adaptability
+                  of the phone. Low temperature is generally in the minus 20
+                  degree celcius, high temperature is at around 80 degree
+                  celecius
+                </p>
+              </div>
+            </div>
+            <!-- Add more cards as needed for each test -->
+          </div>
+        </div>
+      </section>
+
+      <!-- SMT Facility (again, for emphasis) -->
+      <section class="py-12 bg-gray-50">
+        <div class="max-w-screen-2xl mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center text-[#34495e] mb-8">
+            SMT Facility
+          </h2>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="relative">
+              <img
+                src="images/smtFacility.png"
+                alt="SMT Facility"
+                class="w-full h-auto object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-[#151515]">
+      <div
+        class="max-w-screen-2xl h-[75px] mx-auto grid grid-cols-12 px-[106px]"
+      >
+        <div class="col-span-4 flex flex-row gap-x-1 items-center">
+          <!-- <span class="text-[#C2C2C2] text-xs font-normal">
+                Website by
+            </span>
+            <span>
+                <img src="images/footer.png">
+            </span>
+            <span class="text-xs font-normal text-[#337ab7] uppercase">
+                K&A
+            </span> -->
+        </div>
+        <div
+          class="col-span-8 flex flex-row text-[#C2C2C2] text-xs font-normal items-center gap-x-3"
+        >
+          <span
+            class="border border-[#929292] border-t-0 border-b-0 border-l-0 h-6 px-3 flex items-center"
+          >
+            jio industrial
+          </span>
+          <span class="flex flex-row gap-x-2">
+            <a
+              href="https://www.jioindustriesltd.com"
+              target="_blank"
+              class="text-white"
+            >
+              www.jioindustriesltd.com
+            </a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  </body>
+</html>

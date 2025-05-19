@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jio Industrial</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Your main CSS (replace with your actual CSS file if needed) -->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      body {
+        font-family: "Nunito", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+      }
+      .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #da2128 #f1f1f1;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #da2128;
+        border-radius: 3px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      /* Responsive styles */
+      @media (max-width: 1024px) {
+        .max-w-screen-2xl,
+        .xl\:max-w-screen {
+          max-width: 100vw !important;
+        }
+        .px-\[106px\] {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+        }
+      }
+      @media (max-width: 768px) {
+        nav > div.grid {
+          grid-template-columns: 1fr !important;
+          height: auto !important;
+        }
+        .col-span-9,
+        .col-span-2,
+        .col-span-1 {
+          grid-column: span 12 / span 12 !important;
+        }
+        .pr-4 {
+          padding-right: 1rem !important;
+        }
+        .pr-\[106px\] {
+          padding-right: 1rem !important;
+        }
+        .px-\[106px\] {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+        }
+        footer .grid {
+          grid-template-columns: 1fr !important;
+          height: auto !important;
+        }
+        .col-span-4,
+        .col-span-8 {
+          grid-column: span 12 / span 12 !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- headerArea-start -->
+    <header>
+      <nav
+        class="fixed top-0 left-0 right-0 w-full bg-white shadow-[0.5px_0.5px_0px_#929292] z-50"
+      >
+        <div
+          class="max-w-screen-2xl xl:max-w-screen mx-auto h-[60px] grid grid-cols-12 items-center"
+        >
+          <div
+            class="col-span-1 flex flex-row h-full border border-[#929292] border-t-0 border-b-0 border-l-0 items-center gap-x-3 transition-all duration-150 ease-linear hover:bg-[#F1F1F1] hover:cursor-pointer pl-4 group"
+            id="openMenu"
+          >
+            <div class="flex flex-col gap-y-2">
+              <span
+                class="w-[30px] h-[2px] bg-[#231F5A] transition-all duration-300 ease-linear group-hover:translate-x-[6px]"
+              ></span>
+              <span
+                class="w-[30px] h-[2px] bg-[#231F5A] transition-all duration-300 ease-linear group-hover:translate-x-[-3px] group-hover:bg-[#DA2128]"
+              ></span>
+            </div>
+            <div>
+              <h4 class="font-semibold text-sm text-[#231F5A] uppercase">
+                Menu
+              </h4>
+            </div>
+          </div>
+
+          <div class="col-span-9 flex flex-row gap-x-1 justify-center">
+            <span
+              class="border border-[#929292]/40 border-t-0 border-b-0 border-l-0 h-8 px-3 flex items-center"
+            >
+              <a href="#" class="text-sm font-normal text-[#242424]"
+                >mohsinimamchowdhury@gmail.com</a
+              >
+            </span>
+            <span
+              class="border border-[#929292]/40 border-t-0 border-b-0 border-l-0 h-8 px-3 flex items-center"
+            >
+              <a href="#" class="text-sm font-normal text-[#242424]"
+                >01817074874</a
+              >
+            </span>
+            <span class="h-8 px-3 flex items-center">
+              <a href="" class="text-sm font-normal text-[#242424] capitalize">
+                investors
+              </a>
+            </span>
+          </div>
+
+          <div class="col-span-2 flex flex-row pr-4">
+            <span>
+              <img
+                src="images/profileLogo.jpeg"
+                class="h-full w-full"
+                alt="Profile Logo"
+              />
+            </span>
+          </div>
+        </div>
+
+        <div
+          id="menuOverlay"
+          class="fixed top-0 left-0 right-0 h-full bg-black/50 opacity-0 invisible transition-all duration-300 ease-in-out z-50"
+        >
+          <div
+            class="bg-white w-[300px] fixed h-[100vh] top-0 z-50 p-[30px] -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto custom-scrollbar"
+          >
+            <div
+              class="flex flex-row w-full justify-between items-center cursor-pointer"
+              id="closeMenu"
+            >
+              <div
+                class="flex items-center gap-x-2 text-[#242424] hover:text-[#DA2128] transition-colors duration-200"
+              >
+                <span style="font-size: 1.5rem; color: #da2128">&#10005;</span>
+                <span
+                  class="text-[15px] font-normal uppercase transition-all duration-150 ease-linear hover:text-[#DA2128] text-[#242424]"
+                  >close</span
+                >
+              </div>
+            </div>
+
+            <div class="flex flex-col mt-4 menu-content">
+              <!-- Overview -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <span
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  id="menuList"
+                  >Overview</span
+                >
+                <div
+                  class="flex flex-col mt-2 gap-y-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0 scale-y-95 origin-top transform menuItems"
+                >
+                  <a
+                    href="index.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Company Overview</span>
+                  </a>
+                  <a
+                    href="brandandproduct.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Brand & Products</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Company Culture -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <span
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  id="menuList"
+                  >Company Culture</span
+                >
+                <div
+                  class="flex flex-col mt-2 gap-y-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0 scale-y-95 origin-top transform menuItems"
+                >
+                  <a
+                    href="boardDirector.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Board of Directors</span>
+                  </a>
+                  
+                  <a
+                    href="news.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>News & Social Activities</span>
+                  </a>
+                  <a
+                    href="culture.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Company Culture</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Present Status -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <span
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  id="menuList"
+                  >Present Status</span
+                >
+                <div
+                  class="flex flex-col mt-2 gap-y-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0 scale-y-95 origin-top transform menuItems"
+                >
+                  <a
+                    href="companystatus.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Company Status</span>
+                  </a>
+                  <a
+                    href="aftersales.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>After Sales Service</span>
+                  </a>
+                  <a
+                    href="presentbusinessstatus.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Present Business Status</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Our Target -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <span
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  id="menuList"
+                  >Our Target</span
+                >
+                <div
+                  class="flex flex-col mt-2 gap-y-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0 scale-y-95 origin-top transform menuItems"
+                >
+                  <a
+                    href="businesstarget.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Business Target</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Achievement Plan -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <span
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  id="menuList"
+                  >Achievement Plan</span
+                >
+                <div
+                  class="flex flex-col mt-2 gap-y-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0 scale-y-95 origin-top transform menuItems"
+                >
+                  <a
+                    href="achievementbusiness.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Achievement of Business</span>
+                  </a>
+                  <a
+                    href="achievementplan.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Achievement Plan</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Conclusion -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <a
+                  href="conclusion.html"
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  >Conclusion</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            // Menu toggle logic
+            const menuItems = document.querySelectorAll(".menu");
+            menuItems.forEach(function (menuItem) {
+              menuItem.addEventListener("click", function (e) {
+                const submenu = this.querySelector(".menuItems");
+                if (submenu) {
+                  e.stopPropagation();
+                  if (submenu.classList.contains("max-h-0")) {
+                    submenu.classList.remove(
+                      "max-h-0",
+                      "opacity-0",
+                      "scale-y-95"
+                    );
+                    submenu.classList.add(
+                      "max-h-[200px]",
+                      "opacity-100",
+                      "scale-y-100"
+                    );
+                  } else {
+                    submenu.classList.add("max-h-0", "opacity-0", "scale-y-95");
+                    submenu.classList.remove(
+                      "max-h-[200px]",
+                      "opacity-100",
+                      "scale-y-100"
+                    );
+                  }
+                }
+              });
+            });
+
+            // Open menu function
+            window.openMenu = function () {
+              const menuOverlay = document.getElementById("menuOverlay");
+              if (menuOverlay) {
+                menuOverlay.classList.remove("opacity-0", "invisible");
+                menuOverlay.classList.add("opacity-100", "visible");
+                const menuPanel = menuOverlay.querySelector(".bg-white");
+                if (menuPanel) {
+                  menuPanel.classList.remove("-translate-x-full");
+                  menuPanel.classList.add("translate-x-0");
+                }
+              }
+            };
+
+            // Close menu function
+            window.closeMenu = function () {
+              const menuOverlay = document.getElementById("menuOverlay");
+              if (menuOverlay) {
+                menuOverlay.classList.remove("opacity-100", "visible");
+                menuOverlay.classList.add("opacity-0", "invisible");
+                const menuPanel = menuOverlay.querySelector(".bg-white");
+                if (menuPanel) {
+                  menuPanel.classList.remove("translate-x-0");
+                  menuPanel.classList.add("-translate-x-full");
+                }
+              }
+            };
+
+            // Close menu when close button is clicked
+            const closeButton = document.getElementById("closeMenu");
+            if (closeButton) {
+              closeButton.addEventListener("click", function () {
+                window.closeMenu();
+              });
+            }
+
+            // Close menu when clicking on menu items with links
+            const menuLinks = document.querySelectorAll(".menuItems a");
+            menuLinks.forEach(function (link) {
+              link.addEventListener("click", function () {
+                window.closeMenu();
+              });
+            });
+
+            // Open menu button
+            const menuButton = document.getElementById("openMenu");
+            if (menuButton) {
+              menuButton.addEventListener("click", function () {
+                if (window.openMenu) {
+                  window.openMenu();
+                }
+              });
+            }
+          });
+        </script>
+      </nav>
+    </header>
+    <!-- headerArea-finish -->
+
+    <!-- mainArea-start -->
+    <main>
+      <!-- Banner -->
+      <section class="mt-[60px] relative">
+        <div class="owl-carousel banner-carousel">
+          <div
+            class="item h-[653px] bg-center bg-cover bg-no-repeat"
+            style="background-image: url('images/slider1.png')"
+          ></div>
+          <div
+            class="item h-[653px] bg-center bg-cover bg-no-repeat"
+            style="background-image: url('images/slider2.jpg')"
+          ></div>
+          <div
+            class="item h-[653px] bg-center bg-cover bg-no-repeat"
+            style="background-image: url('images/slider3.jpg')"
+          ></div>
+          <div
+            class="item h-[653px] bg-center bg-cover bg-no-repeat"
+            style="background-image: url('images/slider4.jpg')"
+          ></div>
+        </div>
+      </section>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Initialize Owl Carousel
+          const owlCarousel = $(".banner-carousel").owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            nav: false,
+            dots: false,
+            mouseDrag: true,
+            touchDrag: true,
+            animateOut: "slideOutDown",
+            animateIn: "slideInDown",
+          });
+        });
+      </script>
+      <!-- About -->
+      <section class="mt-[40px] md:mt-[90px]">
+        <div class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-3">
+          <div class="px-4 md:pl-[106px] mb-8 md:mb-0 flex items-center">
+            <div class="w-full md:w-[458px]">
+              <h2
+                class="text-[32px] md:text-[42px] text-[#DA2128] font-bold capitalize"
+              >
+                About JIO Industrial
+              </h2>
+              <p
+                class="text-[#000000] font-extralight text-[24px] md:text-[40px] text-justify"
+              >
+                <span class="text-[#DA2128]"> JIO Industrial LTD. </span>
+                have successfully established accessories manufacturing unit
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-span-1 md:col-span-2 flex justify-center md:justify-end px-4 md:pr-[106px]"
+          >
+            <div
+              class="relative w-full max-w-[400px] md:max-w-[600px] h-[220px] md:h-[400px] overflow-hidden"
+            >
+              <div class="wire-animation">
+                <img
+                  src="images/wire1.svg"
+                  alt="Dixon Technologies Circuit"
+                  class="w-full h-full object-contain"
+                />
+
+                <!-- Animated dots that will move along the circuit paths -->
+                <div class="circuit-dot dot-1"></div>
+                <div class="circuit-dot dot-2"></div>
+                <div class="circuit-dot dot-3"></div>
+                <div class="circuit-dot dot-4"></div>
+                <div class="circuit-dot dot-5"></div>
+
+                <!-- Pulsing elements at connection points -->
+                <div class="connection-point point-1"></div>
+                <div class="connection-point point-2"></div>
+                <div class="connection-point point-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- about article  -->
+      <section>
+        <div class="max-w-screen-2xl mx-auto grid grid-cols-3">
+          <div class="pl-[106px] relative">
+            <!-- Animated elements container -->
+            <div class="h-[300px] w-[300px] relative">
+              <!-- Circuit animation similar to about.blade.php -->
+              <div class="circuit-animation">
+                <!-- Animated dots -->
+                <div class="circuit-element dot-sm"></div>
+                <div class="circuit-element dot-sm"></div>
+                <div class="circuit-element dot-sm"></div>
+
+                <!-- Animated squares -->
+                <div class="circuit-element square-sm"></div>
+                <div class="circuit-element square-sm"></div>
+
+                <!-- Animated circles -->
+                <div class="circuit-element circle-sm"></div>
+                <div class="circuit-element circle-sm"></div>
+
+                <!-- Connection points -->
+                <div class="connection-point-sm"></div>
+                <div class="connection-point-sm"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-span-2 flex justify-end pr-[106px]">
+            <div class="w-[555px]">
+              <div class="mb-[11px]">
+                <p class="text-[15px] text-[#242424] font-normal">
+                  We have created
+                  <span class="text-[#DA2128]">JIO Industries LTD</span> to
+                  reinvent existing business models and industry standards,
+                  developing first-class solutions for our customers, partners,
+                  employees, and shareholders. Today we are proud to say that we
+                  have achieved this challenging goal in so many differentiating
+                  and effective ways.
+                  <span class="text-[#DA2128]"
+                    >Now the next phase have started.</span
+                  >
+                </p>
+              </div>
+
+              <div>
+                <a
+                  href="#"
+                  class="text-sm font-semibold text-[#337ab7] capitalize shadow-[0px_1px_0px_#7c7c7c] transition-all duration-150 ease-linear hover:text-[#DA2128] hover:shadow-[0px_1px_#DA2128]"
+                  >Read more</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Division -->
+      <section class="mt-[90px]">
+        <div class="max-w-screen-2xl mx-auto grid grid-cols-3">
+          <div class="pl-[106px]">
+            <div class="w-[458px]">
+              <h2 class="text-[42px] text-[#DA2128] font-bold capitalize mb-5">
+                Innovation Engine
+              </h2>
+              <p class="text-[15px] font-normal text-[#242424]">
+                Jio Industrial ltd. was established in 2017 era focusing on
+                Mobile handset manufacturing & distribution business. We have
+                successfully established accessories manufacturing unit with
+                monthly 0.5 lac plus pcs Mobile handset production capacity.
+                More than 150 employees will get job in different departments
+                when it run in full phase of operation
+              </p>
+            </div>
+          </div>
+
+          <div class="col-span-2 flex justify-end pr-[106px]">
+            <div class="relative w-[600px] h-[400px] overflow-hidden">
+              <div class="circuit-grid-animation">
+                <img
+                  src="images/wire1.svg"
+                  alt="Dixon Technologies Circuit"
+                  class="w-full opacity-70"
+                />
+
+                <!-- Grid dots -->
+                <div class="grid-dot dot-a"></div>
+                <div class="grid-dot dot-b"></div>
+                <div class="grid-dot dot-c"></div>
+                <div class="grid-dot dot-d"></div>
+                <div class="grid-dot dot-e"></div>
+                <div class="grid-dot dot-f"></div>
+
+                <!-- Pulse nodes -->
+                <div class="grid-node node-1"></div>
+                <div class="grid-node node-2"></div>
+                <div class="grid-node node-3"></div>
+
+                <!-- Moving elements -->
+                <div class="grid-square"></div>
+                <div class="grid-circle"></div>
+                <div class="grid-triangle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Division Slider -->
+      <section class="px-[106px] mt-[10px]">
+        <div
+          class="max-w-screen-2xl mx-auto px-[15px] py-[30px] bg-[#F1F1F1] relative"
+        >
+          <div class="owl-carousel division-carousel">
+            <div class="item">
+              <div>
+                <div
+                  class="w-full h-[100px] flex justify-center items-center mb-[15px]"
+                >
+                  <span class="h-[100px] w-[100px]">
+                    <img
+                      src="images/divisionSlider1.png"
+                      class="h-full w-full"
+                    />
+                  </span>
+                </div>
+
+                <div class="w-full h-[30px] relative">
+                  <span
+                    class="absolute left-[50%] translate-x-[-50%] inline-block w-[36px] h-[18px] rounded-tl-[22px] rounded-tr-[22px] bg-[#f1f1f1] border border-[#000] border-b-0"
+                  ></span>
+
+                  <span
+                    class="absolute left-[50%] translate-x-[-50%] top-[9px] bg-[#f1f1f1] z-10 inline-block h-4 w-4 rounded-[50%] border-[4px] border-[#da2128]"
+                  ></span>
+
+                  <div class="relative top-[17px] z-0 h-[1px] bg-[#000]"></div>
+                </div>
+
+                <div class="mb-[37px]">
+                  <div class="mt-[5px]">
+                    <h4 class="capitalize text-[#231F5A] text-[15px] font-bold">
+                      Faith and Fair
+                    </h4>
+                  </div>
+                  <div class="mt-[5px] w-[250px] text-justify">
+                    <p class="text-xs font-light text-[#242424]">
+                      Dixon forayed into the manufacturing of Set Top Boxes for
+                      some of the leading DTH players. We foresee robust growth
+                      opportunities in this segment and it is expected to
+                      significantly contribute to the company’s revenues.
+                    </p>
+                  </div>
+                </div>
+
+                <div>
+                  <a
+                    href="#"
+                    class="text-sm font-semibold text-[#337ab7] capitalize shadow-[0px_1px_0px_#7c7c7c] transition-all duration-150 ease-linear hover:text-[#DA2128] hover:shadow-[0px_1px_#DA2128]"
+                    >read more</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div>
+                <div
+                  class="w-full h-[100px] flex justify-center items-center mb-[15px]"
+                >
+                  <span class="h-[100px] w-[100px]">
+                    <img
+                      src="images/divisionSlider1.png"
+                      class="h-full w-full"
+                    />
+                  </span>
+                </div>
+
+                <div class="w-full h-[30px] relative">
+                  <span
+                    class="absolute left-[50%] translate-x-[-50%] inline-block w-[36px] h-[18px] rounded-tl-[22px] rounded-tr-[22px] bg-[#f1f1f1] border border-[#000] border-b-0"
+                  ></span>
+
+                  <span
+                    class="absolute left-[50%] translate-x-[-50%] top-[9px] bg-[#f1f1f1] z-10 inline-block h-4 w-4 rounded-[50%] border-[4px] border-[#da2128]"
+                  ></span>
+
+                  <div class="relative top-[17px] z-0 h-[1px] bg-[#000]"></div>
+                </div>
+
+                <div class="mb-[37px]">
+                  <div class="mt-[5px]">
+                    <h4 class="capitalize text-[#231F5A] text-[15px] font-bold">
+                      Imam Telecom
+                    </h4>
+                  </div>
+                  <div class="mt-[5px] w-[250px] text-justify">
+                    <p class="text-xs font-light text-[#242424]">
+                      Dixon has established itself as a leading manufacturer of
+                      mobile phones in India. Our state-of-the-art facilities
+                      enable us to produce high-quality devices for various
+                      brands and market segments.
+                    </p>
+                  </div>
+                </div>
+
+                <div>
+                  <a
+                    href="#"
+                    class="text-sm font-semibold text-[#337ab7] capitalize shadow-[0px_1px_0px_#7c7c7c] transition-all duration-150 ease-linear hover:text-[#DA2128] hover:shadow-[0px_1px_#DA2128]"
+                    >read more</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div>
+                <div
+                  class="w-full h-[100px] flex justify-center items-center mb-[15px]"
+                >
+                  <span class="h-[100px] w-[100px]">
+                    <img
+                      src="images/divisionSlider1.png"
+                      class="h-full w-full"
+                    />
+                  </span>
+                </div>
+
+                <div class="w-full h-[30px] relative">
+                  <span
+                    class="absolute left-[50%] translate-x-[-50%] inline-block w-[36px] h-[18px] rounded-tl-[22px] rounded-tr-[22px] bg-[#f1f1f1] border border-[#000] border-b-0"
+                  ></span>
+
+                  <span
+                    class="absolute left-[50%] translate-x-[-50%] top-[9px] bg-[#f1f1f1] z-10 inline-block h-4 w-4 rounded-[50%] border-[4px] border-[#da2128]"
+                  ></span>
+
+                  <div class="relative top-[17px] z-0 h-[1px] bg-[#000]"></div>
+                </div>
+
+                <div class="mb-[37px]">
+                  <div class="mt-[5px]">
+                    <h4 class="capitalize text-[#231F5A] text-[15px] font-bold">
+                      HBC Trading (Shenzhen) Co. Ltd.
+                    </h4>
+                  </div>
+                  <div class="mt-[5px] w-[250px] text-justify">
+                    <p class="text-xs font-light text-[#242424]">
+                      Dixon is a leading manufacturer of LED lighting solutions
+                      in India. We offer a wide range of energy-efficient
+                      lighting products for residential, commercial, and
+                      industrial applications.
+                    </p>
+                  </div>
+                </div>
+
+                <div>
+                  <a
+                    href="#"
+                    class="text-sm font-semibold text-[#337ab7] capitalize shadow-[0px_1px_0px_#7c7c7c] transition-all duration-150 ease-linear hover:text-[#DA2128] hover:shadow-[0px_1px_#DA2128]"
+                    >read more</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div>
+                <div
+                  class="w-full h-[100px] flex justify-center items-center mb-[15px]"
+                >
+                  <span class="h-[100px] w-[100px]">
+                    <img
+                      src="images/divisionSlider1.png"
+                      class="h-full w-full"
+                    />
+                  </span>
+                </div>
+
+                <div class="w-full h-[30px] relative">
+                  <span
+                    class="absolute left-[50%] translate-x-[-50%] inline-block w-[36px] h-[18px] rounded-tl-[22px] rounded-tr-[22px] bg-[#f1f1f1] border border-[#000] border-b-0"
+                  ></span>
+
+                  <span
+                    class="absolute left-[50%] translate-x-[-50%] top-[9px] bg-[#f1f1f1] z-10 inline-block h-4 w-4 rounded-[50%] border-[4px] border-[#da2128]"
+                  ></span>
+
+                  <div class="relative top-[17px] z-0 h-[1px] bg-[#000]"></div>
+                </div>
+
+                <div class="mb-[37px]">
+                  <div class="mt-[5px]">
+                    <h4 class="capitalize text-[#231F5A] text-[15px] font-bold">
+                      HBC Trading Ltd. (HK).
+                    </h4>
+                  </div>
+                  <div class="mt-[5px] w-[250px] text-justify">
+                    <p class="text-xs font-light text-[#242424]">
+                      Dixon manufactures a wide range of home appliances
+                      including washing machines, refrigerators, and other
+                      household electronics. Our products combine innovation
+                      with reliability.
+                    </p>
+                  </div>
+                </div>
+
+                <div>
+                  <a
+                    href="#"
+                    class="text-sm font-semibold text-[#337ab7] capitalize shadow-[0px_1px_0px_#7c7c7c] transition-all duration-150 ease-linear hover:text-[#DA2128] hover:shadow-[0px_1px_#DA2128]"
+                    >read more</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div>
+                <div
+                  class="w-full h-[100px] flex justify-center items-center mb-[15px]"
+                >
+                  <span class="h-[100px] w-[100px]">
+                    <img
+                      src="images/divisionSlider1.png"
+                      class="h-full w-full"
+                    />
+                  </span>
+                </div>
+
+                <div class="w-full h-[30px] relative">
+                  <span
+                    class="absolute left-[50%] translate-x-[-50%] inline-block w-[36px] h-[18px] rounded-tl-[22px] rounded-tr-[22px] bg-[#f1f1f1] border border-[#000] border-b-0"
+                  ></span>
+
+                  <span
+                    class="absolute left-[50%] translate-x-[-50%] top-[9px] bg-[#f1f1f1] z-10 inline-block h-4 w-4 rounded-[50%] border-[4px] border-[#da2128]"
+                  ></span>
+
+                  <div class="relative top-[17px] z-0 h-[1px] bg-[#000]"></div>
+                </div>
+
+                <div class="mb-[37px]">
+                  <div class="mt-[5px]">
+                    <h4 class="capitalize text-[#231F5A] text-[15px] font-bold">
+                      Smile Brothers
+                    </h4>
+                  </div>
+                  <div class="mt-[5px] w-[250px] text-justify">
+                    <p class="text-xs font-light text-[#242424]">
+                      Dixon manufactures a wide range of home appliances
+                      including washing machines, refrigerators, and other
+                      household electronics. Our products combine innovation
+                      with reliability.
+                    </p>
+                  </div>
+                </div>
+
+                <div>
+                  <a
+                    href="#"
+                    class="text-sm font-semibold text-[#337ab7] capitalize shadow-[0px_1px_0px_#7c7c7c] transition-all duration-150 ease-linear hover:text-[#DA2128] hover:shadow-[0px_1px_#DA2128]"
+                    >read more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Custom Navigation Buttons -->
+          <div class="division-nav">
+            <button
+              class="division-prev absolute top-1/2 left-0 transform -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-r-md shadow-md z-10 transition-all duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-[#DA2128]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button
+              class="division-next absolute top-1/2 right-0 transform -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-l-md shadow-md z-10 transition-all duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-[#DA2128]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Initialize Owl Carousel for division slider
+          const divisionCarousel = $(".division-carousel").owlCarousel({
+            items: 4,
+            loop: true,
+            margin: 30,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            nav: false,
+            dots: true,
+            mouseDrag: true,
+            touchDrag: true,
+            responsive: {
+              0: {
+                items: 1,
+              },
+              600: {
+                items: 2,
+              },
+              1000: {
+                items: 3,
+              },
+              1200: {
+                items: 4,
+              },
+            },
+            animateOut: "slideOutLeft",
+            animateIn: "slideInRight",
+          });
+
+          // Custom Navigation
+          $(".division-prev").click(function () {
+            divisionCarousel.trigger("prev.owl.carousel", [300]);
+          });
+
+          $(".division-next").click(function () {
+            divisionCarousel.trigger("next.owl.carousel", [300]);
+          });
+        });
+      </script>
+      <!-- Contact -->
+      <section class="mt-[48px]">
+        <div
+          class="max-w-screen-2xl mx-auto grid grid-cols-3 gap-x-[33px] items-center"
+        >
+          <div class="col-span-2 bg-[#F1F1F1] py-[60px] pl-[91px] pr-[65px]">
+            <div class="flex flex-row gap-x-[30px]">
+              <div>
+                <h4
+                  class="text-base font-bold text-[#231F5A] capitalize relative after:absolute after:h-[2px] after:w-[20%] after:bg-[#DA2128] after:left-0 after:bottom-0"
+                >
+                  corporate film
+                </h4>
+
+                <div class="h-[158px] w-[368px] mt-[15px]">
+                  <img src="images/film.png" class="h-full w-full" />
+                </div>
+              </div>
+
+              <div class="translate-y-[48px]">
+                <h4
+                  class="text-[#231F5A] text-base font-bold capitalize relative after:absolute after:h-[2px] after:w-[30%] after:bg-[#DA2128] after:left-0 after:bottom-0"
+                >
+                  annual report at a glance
+                </h4>
+
+                <div class="h-[142px] w-[254px] mt-[15px]">
+                  <img src="images/annual.png" class="h-full w-full" />
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-row gap-x-[30px] mt-10">
+              <div>
+                <h4
+                  class="text-base font-bold text-[#231F5A] capitalize relative after:absolute after:h-[2px] after:w-[20%] after:bg-[#DA2128] after:left-0 after:bottom-0"
+                >
+                  Corporate Social Responsibility Activities
+                </h4>
+
+                <div class="h-[210px] w-[368px] mt-[15px]">
+                  <img src="images/social.jpg" class="h-full w-full" />
+                </div>
+              </div>
+
+              <div class="translate-y-[30px]">
+                <h4 class="text-[#242424] font-bold text-[15px]">
+                  Creating a Positive Impact
+                </h4>
+
+                <div class="w-[254px] mt-[5px] mb-[11px]">
+                  <p
+                    class="text-[#242424] text-[13px] font-normal text-justify"
+                  >
+                    With success comes responsibility and at Dixon, we believe
+                    in playing our part for the community and the society at
+                    large.
+                  </p>
+                </div>
+
+                <a
+                  href="#"
+                  class="text-sm font-semibold text-[#337ab7] capitalize shadow-[0px_1px_0px_#7c7c7c] transition-all duration-150 ease-linear hover:text-[#DA2128] hover:shadow-[0px_1px_#DA2128]"
+                >
+                  read more
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="pr-[106px]">
+            <div class="mb-[30px]">
+              <h5
+                class="text-base font-bold text-[#231F5A] capitalize relative after:absolute after:h-[2px] after:w-[18%] after:bg-[#DA2128] after:left-0 after:bottom-0"
+              >
+                news & events
+              </h5>
+              <div class="flex flex-col gap-y-[5px] mt-[15px]">
+                <a
+                  href="#"
+                  class="text-[#242424] text-[13px] font-normal transition-all duration-150 ease-linear hover:text-[#DA2128]"
+                >
+                  Dr. Manuji Zarabi, Independent Director of Dixon...
+                </a>
+                <a
+                  href="#"
+                  class="text-[#242424] text-[13px] font-normal transition-all duration-150 ease-linear hover:text-[#DA2128]"
+                >
+                  Inauguration of a new refrigeration plant at...
+                </a>
+              </div>
+
+              <div class="mt-[6px]">
+                <a
+                  href="#"
+                  class="text-sm font-semibold text-[#337ab7] capitalize shadow-[0px_1px_0px_#7c7c7c] transition-all duration-150 ease-linear hover:text-[#DA2128] hover:shadow-[0px_1px_#DA2128]"
+                >
+                  read more
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="text-[42px] font-light text-[#DA2128] leading-12">
+                We are Happy to Help
+              </h2>
+
+              <div class="mt-[30px]">
+                <form>
+                  <div class="h-[34px] w-full mb-[15px]">
+                    <label for="name">
+                      <input
+                        type="text"
+                        name="name"
+                        id="email"
+                        class="w-full h-full border border-[#ccc] text-sm font-normal text-[#555] placeholder:capitalize pl-3 focus:outline-none focus:border-[#DA2128] focus:ring-0"
+                        placeholder="your name"
+                      />
+                    </label>
+                  </div>
+
+                  <div class="h-[34px] w-full mb-[15px]">
+                    <label for="email">
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        class="w-full h-full border border-[#ccc] text-sm font-normal text-[#555] placeholder:capitalize pl-3 focus:outline-none focus:border-[#DA2128] focus:ring-0"
+                        placeholder="Email id"
+                      />
+                    </label>
+                  </div>
+
+                  <div class="h-[34px] w-full mb-[15px]">
+                    <label for="phone">
+                      <input
+                        type="text"
+                        name="phone"
+                        id="phone"
+                        class="w-full h-full border border-[#ccc] text-sm font-normal text-[#555] placeholder:capitalize pl-3 focus:outline-none focus:border-[#DA2128] focus:ring-0"
+                        placeholder="phone"
+                      />
+                    </label>
+                  </div>
+
+                  <div class="h-[54px] w-full mb-[15px]">
+                    <textarea
+                      name="query"
+                      id="query"
+                      class="w-full h-full border border-[#ccc] text-sm font-normal text-[#555] placeholder:capitalize pl-3 pt-3 focus:outline-none focus:border-[#DA2128] focus:ring-0"
+                      placeholder="your query"
+                    ></textarea>
+                  </div>
+
+                  <div>
+                    <button
+                      class="px-[25px] py-2 text-[#DA2128] border border-[#DA2128] text-sm font-normal rounded-sm transition-all duration-150 ease-linear hover:cursor-pointer hover:bg-[#555]/10"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-[#151515]">
+      <div
+        class="max-w-screen-2xl h-[75px] mx-auto grid grid-cols-12 px-[106px]"
+      >
+        <div class="col-span-4 flex flex-row gap-x-1 items-center">
+          <!-- <span class="text-[#C2C2C2] text-xs font-normal">
+                Website by
+            </span>
+            <span>
+                <img src="images/footer.png">
+            </span>
+            <span class="text-xs font-normal text-[#337ab7] uppercase">
+                K&A
+            </span> -->
+        </div>
+        <div
+          class="col-span-8 flex flex-row text-[#C2C2C2] text-xs font-normal items-center gap-x-3"
+        >
+          <span
+            class="border border-[#929292] border-t-0 border-b-0 border-l-0 h-6 px-3 flex items-center"
+          >
+            jio industrial
+          </span>
+          <span class="flex flex-row gap-x-2">
+            <a
+              href="https://www.jioindustriesltd.com"
+              target="_blank"
+              class="text-white"
+            >
+              www.jioindustriesltd.com
+            </a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  </body>
+</html>

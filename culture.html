@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jio Industrial</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: "Nunito", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+      }
+      .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #da2128 #f1f1f1;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #da2128;
+        border-radius: 3px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      @media (max-width: 1024px) {
+        .max-w-screen-2xl,
+        .xl\:max-w-screen {
+          max-width: 100vw !important;
+        }
+        .px-\[106px\] {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+        }
+      }
+      @media (max-width: 768px) {
+        nav > div.grid {
+          grid-template-columns: 1fr !important;
+          height: auto !important;
+        }
+        .col-span-9,
+        .col-span-2,
+        .col-span-1 {
+          grid-column: span 12 / span 12 !important;
+        }
+        .pr-4 {
+          padding-right: 1rem !important;
+        }
+        .pr-\[106px\] {
+          padding-right: 1rem !important;
+        }
+        .px-\[106px\] {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+        }
+        footer .grid {
+          grid-template-columns: 1fr !important;
+          height: auto !important;
+        }
+        .col-span-4,
+        .col-span-8 {
+          grid-column: span 12 / span 12 !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- headerArea-start -->
+    <header>
+      <nav
+        class="fixed top-0 left-0 right-0 w-full bg-white shadow-[0.5px_0.5px_0px_#929292] z-50"
+      >
+        <div
+          class="max-w-screen-2xl xl:max-w-screen mx-auto h-[60px] grid grid-cols-12 items-center"
+        >
+          <div
+            class="col-span-1 flex flex-row h-full border border-[#929292] border-t-0 border-b-0 border-l-0 items-center gap-x-3 transition-all duration-150 ease-linear hover:bg-[#F1F1F1] hover:cursor-pointer pl-4 group"
+            id="openMenu"
+          >
+            <div class="flex flex-col gap-y-2">
+              <span
+                class="w-[30px] h-[2px] bg-[#231F5A] transition-all duration-300 ease-linear group-hover:translate-x-[6px]"
+              ></span>
+              <span
+                class="w-[30px] h-[2px] bg-[#231F5A] transition-all duration-300 ease-linear group-hover:translate-x-[-3px] group-hover:bg-[#DA2128]"
+              ></span>
+            </div>
+            <div>
+              <h4 class="font-semibold text-sm text-[#231F5A] uppercase">
+                Menu
+              </h4>
+            </div>
+          </div>
+          <div class="col-span-9 flex flex-row gap-x-1 justify-center">
+            <span
+              class="border border-[#929292]/40 border-t-0 border-b-0 border-l-0 h-8 px-3 flex items-center"
+            >
+              <a href="#" class="text-sm font-normal text-[#242424]"
+                >mohsinimamchowdhury@gmail.com</a
+              >
+            </span>
+            <span
+              class="border border-[#929292]/40 border-t-0 border-b-0 border-l-0 h-8 px-3 flex items-center"
+            >
+              <a href="#" class="text-sm font-normal text-[#242424]"
+                >01817074874</a
+              >
+            </span>
+            <span class="h-8 px-3 flex items-center">
+              <a href="" class="text-sm font-normal text-[#242424] capitalize"
+                >investors</a
+              >
+            </span>
+          </div>
+          <div class="col-span-2 flex flex-row pr-4">
+            <span>
+              <img
+                src="images/profileLogo.jpeg"
+                class="h-full w-full"
+                alt="Profile Logo"
+              />
+            </span>
+          </div>
+        </div>
+        <div
+          id="menuOverlay"
+          class="fixed top-0 left-0 right-0 h-full bg-black/50 opacity-0 invisible transition-all duration-300 ease-in-out z-50"
+        >
+          <div
+            class="bg-white w-[300px] fixed h-[100vh] top-0 z-50 p-[30px] -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto custom-scrollbar"
+          >
+            <div
+              class="flex flex-row w-full justify-between items-center cursor-pointer"
+              id="closeMenu"
+            >
+              <div
+                class="flex items-center gap-x-2 text-[#242424] hover:text-[#DA2128] transition-colors duration-200"
+              >
+                <span style="font-size: 1.5rem; color: #da2128">&#10005;</span>
+                <span
+                  class="text-[15px] font-normal uppercase transition-all duration-150 ease-linear hover:text-[#DA2128] text-[#242424]"
+                  >close</span
+                >
+              </div>
+            </div>
+                        <div class="flex flex-col mt-4 menu-content">
+              <!-- Overview -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <span
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  id="menuList"
+                  >Overview</span
+                >
+                <div
+                  class="flex flex-col mt-2 gap-y-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0 scale-y-95 origin-top transform menuItems"
+                >
+                  <a
+                    href="index.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Company Overview</span>
+                  </a>
+                  <a
+                    href="brandandproduct.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Brand & Products</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Company Culture -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <span
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  id="menuList"
+                  >Company Culture</span
+                >
+                <div
+                  class="flex flex-col mt-2 gap-y-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0 scale-y-95 origin-top transform menuItems"
+                >
+                  <a
+                    href="boardDirector.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Board of Directors</span>
+                  </a>
+                  
+                  <a
+                    href="news.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>News & Social Activities</span>
+                  </a>
+                  <a
+                    href="culture.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Company Culture</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Present Status -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <span
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  id="menuList"
+                  >Present Status</span
+                >
+                <div
+                  class="flex flex-col mt-2 gap-y-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0 scale-y-95 origin-top transform menuItems"
+                >
+                  <a
+                    href="companystatus.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Company Status</span>
+                  </a>
+                  <a
+                    href="aftersales.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>After Sales Service</span>
+                  </a>
+                  <a
+                    href="presentbusinessstatus.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Present Business Status</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Our Target -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <span
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  id="menuList"
+                  >Our Target</span
+                >
+                <div
+                  class="flex flex-col mt-2 gap-y-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0 scale-y-95 origin-top transform menuItems"
+                >
+                  <a
+                    href="businesstarget.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Business Target</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Achievement Plan -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <span
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  id="menuList"
+                  >Achievement Plan</span
+                >
+                <div
+                  class="flex flex-col mt-2 gap-y-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0 scale-y-95 origin-top transform menuItems"
+                >
+                  <a
+                    href="achievementbusiness.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Achievement of Business</span>
+                  </a>
+                  <a
+                    href="achievementplan.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Achievement Plan</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Conclusion -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <a
+                  href="conclusion.html"
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  >Conclusion</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            // Menu toggle logic
+            const menuItems = document.querySelectorAll(".menu");
+            menuItems.forEach(function (menuItem) {
+              menuItem.addEventListener("click", function (e) {
+                const submenu = this.querySelector(".menuItems");
+                if (submenu) {
+                  e.stopPropagation();
+                  if (submenu.classList.contains("max-h-0")) {
+                    submenu.classList.remove(
+                      "max-h-0",
+                      "opacity-0",
+                      "scale-y-95"
+                    );
+                    submenu.classList.add(
+                      "max-h-[200px]",
+                      "opacity-100",
+                      "scale-y-100"
+                    );
+                  } else {
+                    submenu.classList.add("max-h-0", "opacity-0", "scale-y-95");
+                    submenu.classList.remove(
+                      "max-h-[200px]",
+                      "opacity-100",
+                      "scale-y-100"
+                    );
+                  }
+                }
+              });
+            });
+            // Open menu function
+            window.openMenu = function () {
+              const menuOverlay = document.getElementById("menuOverlay");
+              if (menuOverlay) {
+                menuOverlay.classList.remove("opacity-0", "invisible");
+                menuOverlay.classList.add("opacity-100", "visible");
+                const menuPanel = menuOverlay.querySelector(".bg-white");
+                if (menuPanel) {
+                  menuPanel.classList.remove("-translate-x-full");
+                  menuPanel.classList.add("translate-x-0");
+                }
+              }
+            };
+            // Close menu function
+            window.closeMenu = function () {
+              const menuOverlay = document.getElementById("menuOverlay");
+              if (menuOverlay) {
+                menuOverlay.classList.remove("opacity-100", "visible");
+                menuOverlay.classList.add("opacity-0", "invisible");
+                const menuPanel = menuOverlay.querySelector(".bg-white");
+                if (menuPanel) {
+                  menuPanel.classList.remove("translate-x-0");
+                  menuPanel.classList.add("-translate-x-full");
+                }
+              }
+            };
+            // Close menu when close button is clicked
+            const closeButton = document.getElementById("closeMenu");
+            if (closeButton) {
+              closeButton.addEventListener("click", function () {
+                window.closeMenu();
+              });
+            }
+            // Close menu when clicking on menu items with links
+            const menuLinks = document.querySelectorAll(".menuItems a");
+            menuLinks.forEach(function (link) {
+              link.addEventListener("click", function () {
+                window.closeMenu();
+              });
+            });
+            // Open menu button
+            const menuButton = document.getElementById("openMenu");
+            if (menuButton) {
+              menuButton.addEventListener("click", function () {
+                if (window.openMenu) {
+                  window.openMenu();
+                }
+              });
+            }
+          });
+        </script>
+      </nav>
+    </header>
+    <!-- headerArea-finish -->
+
+    <!-- mainArea-start -->
+    <main>
+      <!-- Culture Slider Section -->
+      <section class="relative mt-[60px]">
+        <div class="max-w-screen-2xl mx-auto">
+          <div class="owl-carousel culture-slider">
+            <div class="item relative h-[500px]">
+              <div
+                class="absolute inset-0 bg-center bg-cover bg-no-repeat"
+                style="background-image: url('images/cultureSlider1.jpg')"
+              >
+                <div class="absolute inset-0 bg-black/30"></div>
+              </div>
+              <div
+                class="relative z-10 flex flex-col items-center justify-center h-full text-white px-8"
+              >
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center">
+                  Our Company Culture
+                </h2>
+                <p class="text-xl md:text-2xl text-center max-w-3xl">
+                  Building a workplace where innovation thrives
+                </p>
+              </div>
+            </div>
+            <div class="item relative h-[500px]">
+              <div
+                class="absolute inset-0 bg-center bg-cover bg-no-repeat"
+                style="background-image: url('images/cultureSlider2.jpg')"
+              >
+                <div class="absolute inset-0 bg-black/30"></div>
+              </div>
+              <div
+                class="relative z-10 flex flex-col items-center justify-center h-full text-white px-8"
+              >
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center">
+                  Collaboration & Teamwork
+                </h2>
+                <p class="text-xl md:text-2xl text-center max-w-3xl">
+                  Working together to achieve excellence
+                </p>
+              </div>
+            </div>
+            <div class="item relative h-[500px]">
+              <div
+                class="absolute inset-0 bg-center bg-cover bg-no-repeat"
+                style="background-image: url('images/cultureSlider3.jpg')"
+              >
+                <div class="absolute inset-0 bg-black/30"></div>
+              </div>
+              <div
+                class="relative z-10 flex flex-col items-center justify-center h-full text-white px-8"
+              >
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center">
+                  Innovation & Growth
+                </h2>
+                <p class="text-xl md:text-2xl text-center max-w-3xl">
+                  Constantly evolving to meet future challenges
+                </p>
+              </div>
+            </div>
+            <div class="item relative h-[500px]">
+              <div
+                class="absolute inset-0 bg-center bg-cover bg-no-repeat"
+                style="background-image: url('images/cultureSlider4.jpg')"
+              >
+                <div class="absolute inset-0 bg-black/30"></div>
+              </div>
+              <div
+                class="relative z-10 flex flex-col items-center justify-center h-full text-white px-8"
+              >
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center">
+                  Integrity & Trust
+                </h2>
+                <p class="text-xl md:text-2xl text-center max-w-3xl">
+                  The foundation of our business relationships
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          $(".culture-slider").owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: false,
+            nav: false,
+            dots: false,
+            mouseDrag: true,
+            touchDrag: true,
+            animateOut: "fadeOut",
+            animateIn: "fadeIn",
+          });
+        });
+      </script>
+      <!-- Company Culture Cards Section -->
+      <section class="py-10">
+        <div class="max-w-screen-2xl mx-auto bg-[#F0F0F0] px-[106px] py-[60px]">
+          <h2 class="text-[42px] font-bold text-[#242424] mb-10 text-center">
+            Company Culture
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+            >
+              <div class="p-6">
+                <div
+                  class="w-16 h-16 mx-auto mb-4 text-[#DA2128] flex items-center justify-center"
+                >
+                  <!-- Example SVG icon -->
+                  <svg
+                    class="w-full h-full"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="#DA2128"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M8 12h8M12 8v8"
+                      stroke="#DA2128"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="text-[24px] font-bold text-[#231F5A] mb-4 text-center"
+                >
+                  Business Goals / Target
+                </h3>
+                <div class="text-gray-700 leading-relaxed">
+                  <p class="text-[15px] font-light text-justify">
+                    The company adheres to the principle of
+                    <span class="text-[#2980b9]"
+                      >building stable and reliable products and achieving
+                      quality status in the industry</span
+                    >.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+            >
+              <div class="p-6">
+                <div
+                  class="w-16 h-16 mx-auto mb-4 text-[#DA2128] flex items-center justify-center"
+                >
+                  <svg
+                    class="w-full h-full"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <rect
+                      x="4"
+                      y="4"
+                      width="16"
+                      height="16"
+                      rx="4"
+                      stroke="#DA2128"
+                      stroke-width="2"
+                    />
+                    <path d="M8 12h8" stroke="#DA2128" stroke-width="2" />
+                  </svg>
+                </div>
+                <h3
+                  class="text-[24px] font-bold text-[#231F5A] mb-4 text-center"
+                >
+                  Quality/Standard
+                </h3>
+                <div class="text-gray-700 leading-relaxed">
+                  <p class="text-[15px] font-light text-justify">
+                    In terms of quality and service,
+                    <span class="text-[#2980b9]"
+                      >we are all in line with the world's leading brand
+                      manufacturers</span
+                    >
+                    and strive to develop into the industry's leading brand in
+                    the shortest possible time.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+            >
+              <div class="p-6">
+                <div
+                  class="w-16 h-16 mx-auto mb-4 text-[#DA2128] flex items-center justify-center"
+                >
+                  <svg
+                    class="w-full h-full"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M4 17h16M4 12h16M4 7h16"
+                      stroke="#DA2128"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="text-[24px] font-bold text-[#231F5A] mb-4 text-center"
+                >
+                  KPI Driven Improvement
+                </h3>
+                <div class="text-gray-700 leading-relaxed">
+                  <p class="text-[15px] font-light text-justify">
+                    We have established a
+                    <span class="text-[#2980b9]"
+                      >KPI driven structure in order to develop our employee,
+                      product and services</span
+                    >
+                    to serve the nation at its desired level and keep a
+                    continuous spirit.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Timeline Section -->
+      <section class="py-16 bg-gray-50">
+        <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+            We Maintain ISO Standard Operation
+            <span class="text-[#2ecc71] block text-2xl"> (P-D-C-A Cycle) </span>
+          </h2>
+          <div class="relative">
+            <!-- Horizontal Line -->
+            <div
+              class="absolute h-1 bg-gray-200 top-24 left-0 right-0 z-0"
+            ></div>
+            <!-- Timeline Items -->
+            <div
+              class="flex flex-col md:flex-row justify-between relative z-10"
+            >
+              <!-- PLAN -->
+              <div class="flex flex-col items-center mb-8 md:mb-0 px-4">
+                <div
+                  class="w-16 h-16 rounded-full flex items-center justify-center mb-4"
+                  style="background-color: #3498db"
+                >
+                  <svg
+                    class="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M4 7h16M4 12h16M4 17h16"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="w-4 h-4 rounded-full bg-white border-4 absolute top-24 transform -translate-y-1/2"
+                  style="border-color: #3498db"
+                ></div>
+                <div class="bg-white rounded-lg shadow-md p-6 max-w-xs mt-8">
+                  <h3
+                    class="text-xl font-bold mb-2 text-center uppercase"
+                    style="color: #3498db"
+                  >
+                    plan
+                  </h3>
+                  <p class="text-gray-600 text-center">
+                    Before acting we try to understand the work. After
+                    understanding we create a proper plan.
+                  </p>
+                </div>
+                <div class="h-8 w-1 bg-gray-200 my-4 md:hidden"></div>
+              </div>
+              <!-- DO -->
+              <div class="flex flex-col items-center mb-8 md:mb-0 px-4">
+                <div
+                  class="w-16 h-16 rounded-full flex items-center justify-center mb-4"
+                  style="background-color: #2ecc71"
+                >
+                  <svg
+                    class="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5 13l4 4L19 7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="w-4 h-4 rounded-full bg-white border-4 absolute top-24 transform -translate-y-1/2"
+                  style="border-color: #2ecc71"
+                ></div>
+                <div class="bg-white rounded-lg shadow-md p-6 max-w-xs mt-8">
+                  <h3
+                    class="text-xl font-bold mb-2 text-center uppercase"
+                    style="color: #2ecc71"
+                  >
+                    do
+                  </h3>
+                  <p class="text-gray-600 text-center">
+                    Before acting we try to understand the work. After
+                    understanding we create a proper plan.
+                  </p>
+                </div>
+                <div class="h-8 w-1 bg-gray-200 my-4 md:hidden"></div>
+              </div>
+              <!-- CHECK -->
+              <div class="flex flex-col items-center mb-8 md:mb-0 px-4">
+                <div
+                  class="w-16 h-16 rounded-full flex items-center justify-center mb-4"
+                  style="background-color: #e67e22"
+                >
+                  <svg
+                    class="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M9 12l2 2l4-4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="w-4 h-4 rounded-full bg-white border-4 absolute top-24 transform -translate-y-1/2"
+                  style="border-color: #e67e22"
+                ></div>
+                <div class="bg-white rounded-lg shadow-md p-6 max-w-xs mt-8">
+                  <h3
+                    class="text-xl font-bold mb-2 text-center uppercase"
+                    style="color: #e67e22"
+                  >
+                    check
+                  </h3>
+                  <p class="text-gray-600 text-center">
+                    Before acting we try to understand the work. After
+                    understanding we create a proper plan.
+                  </p>
+                </div>
+                <div class="h-8 w-1 bg-gray-200 my-4 md:hidden"></div>
+              </div>
+              <!-- ACT -->
+              <div class="flex flex-col items-center mb-8 md:mb-0 px-4">
+                <div
+                  class="w-16 h-16 rounded-full flex items-center justify-center mb-4"
+                  style="background-color: #ff6b6b"
+                >
+                  <svg
+                    class="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 4v16m8-8H4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="w-4 h-4 rounded-full bg-white border-4 absolute top-24 transform -translate-y-1/2"
+                  style="border-color: #ff6b6b"
+                ></div>
+                <div class="bg-white rounded-lg shadow-md p-6 max-w-xs mt-8">
+                  <h3
+                    class="text-xl font-bold mb-2 text-center uppercase"
+                    style="color: #ff6b6b"
+                  >
+                    act
+                  </h3>
+                  <p class="text-gray-600 text-center">
+                    Before acting we try to understand the work. After
+                    understanding we create a proper plan.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Mobile Timeline Line -->
+            <div
+              class="absolute w-1 bg-gray-200 top-0 bottom-0 left-1/2 transform -translate-x-1/2 z-0 md:hidden"
+            ></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-[#151515]">
+      <div
+        class="max-w-screen-2xl h-[75px] mx-auto grid grid-cols-12 px-[106px]"
+      >
+        <div class="col-span-4 flex flex-row gap-x-1 items-center"></div>
+        <div
+          class="col-span-8 flex flex-row text-[#C2C2C2] text-xs font-normal items-center gap-x-3"
+        >
+          <span
+            class="border border-[#929292] border-t-0 border-b-0 border-l-0 h-6 px-3 flex items-center"
+            >jio industrial</span
+          >
+          <span class="flex flex-row gap-x-2">
+            <a
+              href="https://www.jioindustriesltd.com"
+              target="_blank"
+              class="text-white"
+              >www.jioindustriesltd.com</a
+            >
+          </span>
+        </div>
+      </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  </body>
+</html>

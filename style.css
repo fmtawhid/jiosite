@@ -1,0 +1,852 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Nunito', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Add any additional custom styles below */
+@layer base {
+  html {
+    font-family: 'Nunito', system-ui, sans-serif;
+  }
+}
+
+/* Custom Owl Carousel Animations */
+.slideInDown {
+  animation-name: slideInDown;
+  animation-duration: 1s;
+}
+
+.slideOutDown {
+  animation-name: slideOutDown;
+  animation-duration: 1s;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideOutDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+/* Hide default Owl Carousel navigation */
+.owl-nav,
+.owl-dots {
+  display: none !important;
+}
+
+/* Custom cursor for carousel */
+.banner-carousel {
+  cursor: grab;
+}
+
+.banner-carousel:active {
+  cursor: grabbing;
+}
+
+/* Wire SVG Animation Styles */
+.wire-animation {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.circuit-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #DA2128;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.dot-1 {
+  top: 40%;
+  left: 0;
+  animation: moveRightToLeft 8s linear infinite;
+}
+
+.dot-2 {
+  top: 60%;
+  left: 100%;
+  animation: moveLeftToRight 12s linear infinite reverse;
+}
+
+.dot-3 {
+  top: 30%;
+  left: 50%;
+  animation: moveUpDown 6s ease-in-out infinite;
+}
+
+.dot-4 {
+  top: 70%;
+  left: 30%;
+  animation: moveRightToLeft 10s linear infinite 2s;
+}
+
+.dot-5 {
+  top: 20%;
+  left: 70%;
+  animation: moveLeftToRight 7s linear infinite;
+}
+
+.connection-point {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: rgba(218, 33, 40, 0.2);
+  border-radius: 50%;
+  z-index: 5;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.point-1 {
+  top: 25%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.point-2 {
+  top: 60%;
+  left: 75%;
+  animation-delay: 1s;
+}
+
+.point-3 {
+  top: 40%;
+  left: 45%;
+  animation-delay: 2s;
+}
+
+@keyframes moveRightToLeft {
+  0% {
+    transform: translateX(600px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(600px);
+  }
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+}
+
+/* Add these animations for the aboutArticle.blade.php */
+/* Square animations */
+.animate-float-square-1 {
+  top: 20%;
+  left: 10%;
+  animation: floatSquare 8s ease-in-out infinite;
+}
+
+.animate-float-square-2 {
+  top: 50%;
+  left: 40%;
+  animation: floatSquare 6s ease-in-out infinite 1s;
+}
+
+.animate-float-square-3 {
+  top: 70%;
+  left: 20%;
+  animation: floatSquare 10s ease-in-out infinite 2s;
+}
+
+/* Dot animations */
+.animate-float-dot-1 {
+  top: 30%;
+  left: 60%;
+  animation: floatDot 7s linear infinite;
+}
+
+.animate-float-dot-2 {
+  top: 60%;
+  left: 70%;
+  animation: floatDot 5s linear infinite 1.5s;
+}
+
+.animate-float-dot-3 {
+  top: 80%;
+  left: 50%;
+  animation: floatDot 9s linear infinite 3s;
+}
+
+/* Line animations */
+.animate-line-1 {
+  top: 40%;
+  left: 30%;
+  transform-origin: left center;
+  animation: rotateLine 12s linear infinite;
+}
+
+.animate-line-2 {
+  top: 65%;
+  left: 55%;
+  transform-origin: left center;
+  animation: rotateLine 8s linear infinite reverse;
+}
+
+@keyframes floatSquare {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(20px, 10px) rotate(5deg);
+  }
+  50% {
+    transform: translate(0, 20px) rotate(0deg);
+  }
+  75% {
+    transform: translate(-10px, 10px) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes floatDot {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(30px, -20px);
+  }
+  50% {
+    transform: translate(60px, 0);
+  }
+  75% {
+    transform: translate(30px, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes rotateLine {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Small circuit animations for aboutArticle.blade.php */
+.circuit-animation {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.circuit-element {
+  position: absolute;
+  background-color: #DA2128;
+  z-index: 10;
+}
+
+.dot-sm {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+.dot-sm:nth-child(1) {
+  top: 30%;
+  left: 10%;
+  animation: moveHorizontal 6s linear infinite;
+}
+
+.dot-sm:nth-child(2) {
+  top: 50%;
+  left: 60%;
+  animation: moveHorizontal 8s linear infinite reverse;
+}
+
+.dot-sm:nth-child(3) {
+  top: 70%;
+  left: 40%;
+  animation: moveVertical 7s linear infinite;
+}
+
+.square-sm {
+  width: 6px;
+  height: 6px;
+}
+
+.square-sm:nth-child(4) {
+  top: 25%;
+  left: 45%;
+  animation: moveHorizontal 9s linear infinite 1s;
+}
+
+.square-sm:nth-child(5) {
+  top: 65%;
+  left: 20%;
+  animation: moveVertical 5s linear infinite 2s;
+}
+
+.circle-sm {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.circle-sm:nth-child(6) {
+  top: 15%;
+  left: 30%;
+  animation: moveVertical 10s linear infinite 1.5s;
+}
+
+.circle-sm:nth-child(7) {
+  top: 55%;
+  left: 70%;
+  animation: moveHorizontal 7s linear infinite 3s;
+}
+
+.connection-point-sm {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(218, 33, 40, 0.3);
+  border-radius: 50%;
+  z-index: 5;
+  animation: pulseSm 4s ease-in-out infinite;
+}
+
+.connection-point-sm:nth-child(8) {
+  top: 40%;
+  left: 25%;
+  animation-delay: 0.5s;
+}
+
+.connection-point-sm:nth-child(9) {
+  top: 60%;
+  left: 55%;
+  animation-delay: 2.5s;
+}
+
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveVertical {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseSm {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+}
+
+/* Circuit Grid Animation for division.blade.php */
+.circuit-grid-animation {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #DA2128;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.dot-a {
+  top: 20%;
+  left: 20%;
+  animation: blinkFade 3s ease-in-out infinite;
+}
+
+.dot-b {
+  top: 20%;
+  left: 80%;
+  animation: blinkFade 3s ease-in-out infinite 0.5s;
+}
+
+.dot-c {
+  top: 50%;
+  left: 20%;
+  animation: blinkFade 3s ease-in-out infinite 1s;
+}
+
+.dot-d {
+  top: 50%;
+  left: 80%;
+  animation: blinkFade 3s ease-in-out infinite 1.5s;
+}
+
+.dot-e {
+  top: 80%;
+  left: 20%;
+  animation: blinkFade 3s ease-in-out infinite 2s;
+}
+
+.dot-f {
+  top: 80%;
+  left: 80%;
+  animation: blinkFade 3s ease-in-out infinite 2.5s;
+}
+
+.grid-node {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: rgba(218, 33, 40, 0.3);
+  border-radius: 50%;
+  z-index: 5;
+  animation: nodeExpand 5s ease-in-out infinite;
+}
+
+.node-1 {
+  top: 35%;
+  left: 35%;
+  animation-delay: 0s;
+}
+
+.node-2 {
+  top: 65%;
+  left: 65%;
+  animation-delay: 1.5s;
+}
+
+.node-3 {
+  top: 35%;
+  left: 65%;
+  animation-delay: 3s;
+}
+
+.grid-square {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #DA2128;
+  top: 30%;
+  left: 30%;
+  z-index: 10;
+  animation: moveSquare 15s linear infinite;
+}
+
+.grid-circle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: rgba(218, 33, 40, 0.8);
+  border-radius: 50%;
+  top: 70%;
+  left: 70%;
+  z-index: 10;
+  animation: moveCircle 12s linear infinite;
+}
+
+.grid-triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 14px solid #DA2128;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  animation: rotateTriangle 10s linear infinite;
+}
+
+@keyframes blinkFade {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes nodeExpand {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.7;
+  }
+}
+
+@keyframes moveSquare {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(300px, 0);
+  }
+  50% {
+    transform: translate(300px, 200px);
+  }
+  75% {
+    transform: translate(0, 200px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes moveCircle {
+  0% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(-200px, -100px);
+  }
+  66% {
+    transform: translate(100px, -200px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes rotateTriangle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(150px) rotate(-360deg);
+  }
+}
+
+/* Division Slider Styles */
+.division-carousel .item {
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.division-carousel .owl-item {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+
+/* Custom Navigation Buttons */
+.division-nav button {
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.division-nav button:hover {
+  opacity: 1;
+}
+
+/* Owl Carousel Dots Styling */
+.division-carousel .owl-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 8px;
+}
+
+.division-carousel .owl-dots .owl-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: all 0.3s ease;
+}
+
+.division-carousel .owl-dots .owl-dot.active {
+  background-color: #DA2128;
+  transform: scale(1.2);
+}
+
+.division-carousel .owl-dots .owl-dot:hover {
+  background-color: #999;
+}
+
+.division-carousel .owl-dots .owl-dot.active:hover {
+  background-color: #DA2128;
+}
+
+/* Left-to-right animation */
+.slideInRight {
+  animation-name: slideInRight;
+  animation-duration: 0.5s;
+}
+
+.slideOutLeft {
+  animation-name: slideOutLeft;
+  animation-duration: 0.5s;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+/* Custom Scrollbar Styles */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #87CEEB; /* Light sky blue color */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #6CB4D9; /* Slightly darker on hover */
+}
+
+/* Hide scrollbar when not needed */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #87CEEB transparent;
+  overflow-y: auto;
+}
+
+/* For Firefox */
+@supports (scrollbar-width: thin) {
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #87CEEB transparent;
+  }
+}
+
+/* For Edge and IE */
+.custom-scrollbar {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+/* Add these animations for the membership.blade.php */
+/* Wire animations for board members section */
+.wire-animation-board {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.board-line-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.board-line {
+  position: relative;
+  width: 80%;
+  height: 1px;
+  background-color: #C6C6C6;
+}
+
+.board-head {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #DA2128;
+  border-radius: 50%;
+  left: 0;
+  top: -8px;
+  z-index: 5;
+}
+
+.board-circuit-dot {
+  position: absolute;
+  background-color: #DA2128;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.board-dot-1 {
+  top: -4px;
+  left: 0;
+  animation: moveLeftToRight 8s linear infinite;
+}
+
+.board-dot-2 {
+  top: -4px;
+  left: 0;
+  animation: moveLeftToRight 12s linear infinite 2s;
+}
+
+.board-dot-3 {
+  top: -4px;
+  right: 0;
+  left: auto;
+  animation: moveRightToLeft 10s linear infinite;
+}
+
+.board-dot-4 {
+  top: -4px;
+  right: 0;
+  left: auto;
+  animation: moveRightToLeft 15s linear infinite;
+}
+
+.board-dot-5 {
+  top: -4px;
+  left: 0;
+  animation: moveLeftToRight 7s linear infinite 1s;
+}
+
+.board-dot-6 {
+  top: -4px;
+  right: 0;
+  left: auto;
+  animation: moveRightToLeft 9s linear infinite 3s;
+}
+
+.board-floating-1 {
+  top: 30%;
+  left: 20%;
+  animation: floatDot 7s linear infinite;
+}
+
+.board-floating-2 {
+  top: 60%;
+  left: 70%;
+  animation: floatDot 5s linear infinite 1.5s;
+}
+
+.board-floating-3 {
+  top: 40%;
+  left: 30%;
+  animation: moveLeftToRight 9s linear infinite 1.5s;
+}
+
+.board-floating-4 {
+  top: 70%;
+  left: 80%;
+  animation: moveRightToLeft 11s linear infinite 0.5s;
+}
+
+.board-floating-5 {
+  top: 20%;
+  left: 60%;
+  animation: floatSquare 8s ease-in-out infinite;
+}
+
+.board-floating-6 {
+  top: 50%;
+  left: 40%;
+  animation: floatSquare 6s ease-in-out infinite 1s;
+}
+
+.board-floating-7 {
+  top: 80%;
+  left: 50%;
+  animation: floatDot 9s linear infinite 3s;
+}
+
+.board-floating-8 {
+  top: 35%;
+  left: 75%;
+  animation: rotateLine 12s linear infinite;
+}

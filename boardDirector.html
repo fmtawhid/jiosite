@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jio Industrial</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Your main CSS (replace with your actual CSS file if needed) -->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      body {
+        font-family: "Nunito", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+      }
+      .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #da2128 #f1f1f1;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #da2128;
+        border-radius: 3px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      /* Responsive styles */
+      @media (max-width: 1024px) {
+        .max-w-screen-2xl,
+        .xl\:max-w-screen {
+          max-width: 100vw !important;
+        }
+        .px-\[106px\] {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+        }
+      }
+      @media (max-width: 768px) {
+        nav > div.grid {
+          grid-template-columns: 1fr !important;
+          height: auto !important;
+        }
+        .col-span-9,
+        .col-span-2,
+        .col-span-1 {
+          grid-column: span 12 / span 12 !important;
+        }
+        .pr-4 {
+          padding-right: 1rem !important;
+        }
+        .pr-\[106px\] {
+          padding-right: 1rem !important;
+        }
+        .px-\[106px\] {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+        }
+        footer .grid {
+          grid-template-columns: 1fr !important;
+          height: auto !important;
+        }
+        .col-span-4,
+        .col-span-8 {
+          grid-column: span 12 / span 12 !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- headerArea-start -->
+    <header>
+      <nav
+        class="fixed top-0 left-0 right-0 w-full bg-white shadow-[0.5px_0.5px_0px_#929292] z-50"
+      >
+        <div
+          class="max-w-screen-2xl xl:max-w-screen mx-auto h-[60px] grid grid-cols-12 items-center"
+        >
+          <div
+            class="col-span-1 flex flex-row h-full border border-[#929292] border-t-0 border-b-0 border-l-0 items-center gap-x-3 transition-all duration-150 ease-linear hover:bg-[#F1F1F1] hover:cursor-pointer pl-4 group"
+            id="openMenu"
+          >
+            <div class="flex flex-col gap-y-2">
+              <span
+                class="w-[30px] h-[2px] bg-[#231F5A] transition-all duration-300 ease-linear group-hover:translate-x-[6px]"
+              ></span>
+              <span
+                class="w-[30px] h-[2px] bg-[#231F5A] transition-all duration-300 ease-linear group-hover:translate-x-[-3px] group-hover:bg-[#DA2128]"
+              ></span>
+            </div>
+            <div>
+              <h4 class="font-semibold text-sm text-[#231F5A] uppercase">
+                Menu
+              </h4>
+            </div>
+          </div>
+
+          <div class="col-span-9 flex flex-row gap-x-1 justify-center">
+            <span
+              class="border border-[#929292]/40 border-t-0 border-b-0 border-l-0 h-8 px-3 flex items-center"
+            >
+              <a href="#" class="text-sm font-normal text-[#242424]"
+                >mohsinimamchowdhury@gmail.com</a
+              >
+            </span>
+            <span
+              class="border border-[#929292]/40 border-t-0 border-b-0 border-l-0 h-8 px-3 flex items-center"
+            >
+              <a href="#" class="text-sm font-normal text-[#242424]"
+                >01817074874</a
+              >
+            </span>
+            <span class="h-8 px-3 flex items-center">
+              <a href="" class="text-sm font-normal text-[#242424] capitalize">
+                investors
+              </a>
+            </span>
+          </div>
+
+          <div class="col-span-2 flex flex-row pr-4">
+            <span>
+              <img
+                src="images/profileLogo.jpeg"
+                class="h-full w-full"
+                alt="Profile Logo"
+              />
+            </span>
+          </div>
+        </div>
+
+        <div
+          id="menuOverlay"
+          class="fixed top-0 left-0 right-0 h-full bg-black/50 opacity-0 invisible transition-all duration-300 ease-in-out z-50"
+        >
+          <div
+            class="bg-white w-[300px] fixed h-[100vh] top-0 z-50 p-[30px] -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto custom-scrollbar"
+          >
+            <div
+              class="flex flex-row w-full justify-between items-center cursor-pointer"
+              id="closeMenu"
+            >
+              <div
+                class="flex items-center gap-x-2 text-[#242424] hover:text-[#DA2128] transition-colors duration-200"
+              >
+                <span style="font-size: 1.5rem; color: #da2128">&#10005;</span>
+                <span
+                  class="text-[15px] font-normal uppercase transition-all duration-150 ease-linear hover:text-[#DA2128] text-[#242424]"
+                  >close</span
+                >
+              </div>
+            </div>
+
+                        <div class="flex flex-col mt-4 menu-content">
+              <!-- Overview -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <span
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  id="menuList"
+                  >Overview</span
+                >
+                <div
+                  class="flex flex-col mt-2 gap-y-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0 scale-y-95 origin-top transform menuItems"
+                >
+                  <a
+                    href="index.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Company Overview</span>
+                  </a>
+                  <a
+                    href="brandandproduct.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Brand & Products</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Company Culture -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <span
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  id="menuList"
+                  >Company Culture</span
+                >
+                <div
+                  class="flex flex-col mt-2 gap-y-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0 scale-y-95 origin-top transform menuItems"
+                >
+                  <a
+                    href="boardDirector.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Board of Directors</span>
+                  </a>
+                  
+                  <a
+                    href="news.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>News & Social Activities</span>
+                  </a>
+                  <a
+                    href="culture.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Company Culture</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Present Status -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <span
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  id="menuList"
+                  >Present Status</span
+                >
+                <div
+                  class="flex flex-col mt-2 gap-y-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0 scale-y-95 origin-top transform menuItems"
+                >
+                  <a
+                    href="companystatus.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Company Status</span>
+                  </a>
+                  <a
+                    href="aftersales.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>After Sales Service</span>
+                  </a>
+                  <a
+                    href="presentbusinessstatus.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Present Business Status</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Our Target -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <span
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  id="menuList"
+                  >Our Target</span
+                >
+                <div
+                  class="flex flex-col mt-2 gap-y-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0 scale-y-95 origin-top transform menuItems"
+                >
+                  <a
+                    href="businesstarget.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Business Target</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Achievement Plan -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <span
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  id="menuList"
+                  >Achievement Plan</span
+                >
+                <div
+                  class="flex flex-col mt-2 gap-y-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0 scale-y-95 origin-top transform menuItems"
+                >
+                  <a
+                    href="achievementbusiness.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Achievement of Business</span>
+                  </a>
+                  <a
+                    href="achievementplan.html"
+                    class="text-[13px] font-light text-[#242424] capitalize pl-2 py-1 rounded flex items-center group"
+                  >
+                    <span
+                      class="mr-2 opacity-0 transition-opacity duration-200 ease-in-out transform -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                      >&#8594;</span
+                    >
+                    <span>Achievement Plan</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Conclusion -->
+              <div
+                class="menu relative cursor-pointer px-2 py-2 transition-colors duration-200"
+              >
+                <a
+                  href="conclusion.html"
+                  class="text-sm font-semibold text-[#242424] capitalize pr-6"
+                  >Conclusion</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            // Menu toggle logic
+            const menuItems = document.querySelectorAll(".menu");
+            menuItems.forEach(function (menuItem) {
+              menuItem.addEventListener("click", function (e) {
+                const submenu = this.querySelector(".menuItems");
+                if (submenu) {
+                  e.stopPropagation();
+                  if (submenu.classList.contains("max-h-0")) {
+                    submenu.classList.remove(
+                      "max-h-0",
+                      "opacity-0",
+                      "scale-y-95"
+                    );
+                    submenu.classList.add(
+                      "max-h-[200px]",
+                      "opacity-100",
+                      "scale-y-100"
+                    );
+                  } else {
+                    submenu.classList.add("max-h-0", "opacity-0", "scale-y-95");
+                    submenu.classList.remove(
+                      "max-h-[200px]",
+                      "opacity-100",
+                      "scale-y-100"
+                    );
+                  }
+                }
+              });
+            });
+
+            // Open menu function
+            window.openMenu = function () {
+              const menuOverlay = document.getElementById("menuOverlay");
+              if (menuOverlay) {
+                menuOverlay.classList.remove("opacity-0", "invisible");
+                menuOverlay.classList.add("opacity-100", "visible");
+                const menuPanel = menuOverlay.querySelector(".bg-white");
+                if (menuPanel) {
+                  menuPanel.classList.remove("-translate-x-full");
+                  menuPanel.classList.add("translate-x-0");
+                }
+              }
+            };
+
+            // Close menu function
+            window.closeMenu = function () {
+              const menuOverlay = document.getElementById("menuOverlay");
+              if (menuOverlay) {
+                menuOverlay.classList.remove("opacity-100", "visible");
+                menuOverlay.classList.add("opacity-0", "invisible");
+                const menuPanel = menuOverlay.querySelector(".bg-white");
+                if (menuPanel) {
+                  menuPanel.classList.remove("translate-x-0");
+                  menuPanel.classList.add("-translate-x-full");
+                }
+              }
+            };
+
+            // Close menu when close button is clicked
+            const closeButton = document.getElementById("closeMenu");
+            if (closeButton) {
+              closeButton.addEventListener("click", function () {
+                window.closeMenu();
+              });
+            }
+
+            // Close menu when clicking on menu items with links
+            const menuLinks = document.querySelectorAll(".menuItems a");
+            menuLinks.forEach(function (link) {
+              link.addEventListener("click", function () {
+                window.closeMenu();
+              });
+            });
+
+            // Open menu button
+            const menuButton = document.getElementById("openMenu");
+            if (menuButton) {
+              menuButton.addEventListener("click", function () {
+                if (window.openMenu) {
+                  window.openMenu();
+                }
+              });
+            }
+          });
+        </script>
+      </nav>
+    </header>
+    <!-- headerArea-finish -->
+
+    <!-- mainArea-start -->
+    <main>
+      <section class="mt-[60px] py-[42px]">
+        <div class="max-w-screen-2xl mx-auto grid grid-cols-4 gap-x-[80px]">
+          <div class="col-span-3 pl-[106px]">
+            <div>
+              <h2 class="text-[#242424] text-[36px] font-light capitalize">
+                The Driving Force: Our Core Leadership
+              </h2>
+              <div class="flex flex-row gap-x-5">
+                <span class="font-normal text-[18px] text-[#DA2128] capitalize">
+                  board of directors
+                </span>
+                <a
+                  href="#"
+                  class="text-[18px] text-[#919191] font-normal transition-all duration-200 ease-linear hover:text-[#DA2128]"
+                >
+                  Key Managerial Personnel and Senior Management
+                </a>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-x-[30px] mt-[45px]">
+              <!-- Member 1 -->
+              <div class="shadow-[1px_0px_8px_black]/40 group relative overflow-hidden shadow-lg">
+                <div class="w-full h-[288px]">
+                  <img
+                    src="images/board1.png"
+                    alt="Hasan Imam Chowdhury"
+                    class="h-full w-full"
+                  />
+                </div>
+                <div class="relative p-[15px] h-[80px] overflow-hidden">
+                  <div class="relative z-10 group-hover:opacity-0 transition-opacity duration-300">
+                    <h4 class="font-bold text-[18px] text-[#242424] line-clamp-1">
+                      Hasan Imam Chowdhury
+                    </h4>
+                    <p class="text-[13px] font-light text-[#242424] capitalize">
+                      chairman
+                    </p>
+                  </div>
+                  <a
+                    href="bodDetails.html"
+                    class="absolute inset-0 flex items-center justify-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20"
+                  >
+                    Read More
+                  </a>
+                  <span
+                    class="absolute bottom-0 left-0 h-0 w-[38px] bg-[#DA2128] transition-all duration-500 ease-in-out group-hover:h-full group-hover:w-full group-hover:z-[15]"
+                  ></span>
+                </div>
+              </div>
+              <!-- Member 2 -->
+              <div class="shadow-[1px_0px_8px_black]/40 group relative overflow-hidden shadow-lg">
+                <div class="w-full h-[288px]">
+                  <img
+                    src="images/board2.png"
+                    alt="Mohsin Imam Chowdhury"
+                    class="h-full w-full"
+                  />
+                </div>
+                <div class="relative p-[15px] h-[80px] overflow-hidden">
+                  <div class="relative z-10 group-hover:opacity-0 transition-opacity duration-300">
+                    <h4 class="font-bold text-[18px] text-[#242424] line-clamp-1">
+                      Mohsin Imam Chowdhury
+                    </h4>
+                    <p class="text-[13px] font-light text-[#242424] capitalize">
+                      Managing Director
+                    </p>
+                  </div>
+                  <a
+                    href="bodDetails.html"
+                    class="absolute inset-0 flex items-center justify-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20"
+                  >
+                    Read More
+                  </a>
+                  <span
+                    class="absolute bottom-0 left-0 h-0 w-[38px] bg-[#DA2128] transition-all duration-500 ease-in-out group-hover:h-full group-hover:w-full group-hover:z-[15]"
+                  ></span>
+                </div>
+              </div>
+              <!-- Member 3 -->
+              <div class="shadow-[1px_0px_8px_black]/40 group relative overflow-hidden shadow-lg">
+                <div class="w-full h-[288px]">
+                  <img
+                    src="images/board3.png"
+                    alt="Abu Laek Mozhar Imam Chowdhury"
+                    class="h-full w-full"
+                  />
+                </div>
+                <div class="relative p-[15px] h-[80px] overflow-hidden">
+                  <div class="relative z-10 group-hover:opacity-0 transition-opacity duration-300">
+                    <h4 class="font-bold text-[18px] text-[#242424] line-clamp-1">
+                      Abu Laek Mozhar Imam Chowdhury
+                    </h4>
+                    <p class="text-[13px] font-light text-[#242424] capitalize">
+                      Director
+                    </p>
+                  </div>
+                  <a
+                    href="bodDetails.html"
+                    class="absolute inset-0 flex items-center justify-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20"
+                  >
+                    Read More
+                  </a>
+                  <span
+                    class="absolute bottom-0 left-0 h-0 w-[38px] bg-[#DA2128] transition-all duration-500 ease-in-out group-hover:h-full group-hover:w-full group-hover:z-[15]"
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative h-full">
+            <!-- Two lines with round heads and animated elements -->
+            <div class="wire-animation-board">
+              <!-- First line with round head -->
+              <div class="board-line-container">
+                <div class="board-line relative">
+                  <div class="board-head"></div>
+                  <!-- Animated elements on first line -->
+                  <div
+                    class="board-circuit-dot board-dot-1 w-2 h-2 absolute"
+                  ></div>
+                  <div
+                    class="board-circuit-dot board-dot-2 w-3 h-3 bg-transparent border border-[#DA2128] absolute"
+                  ></div>
+                  <div
+                    class="board-circuit-dot board-dot-3 w-2 h-2 rotate-45 rounded-none absolute"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- Second line with round head -->
+              <div class="board-line-container">
+                <div class="board-line relative">
+                  <div class="board-head"></div>
+                  <!-- Animated elements on second line -->
+                  <div
+                    class="board-circuit-dot board-dot-4 w-3 h-3 bg-transparent border-2 border-[#DA2128] absolute"
+                  ></div>
+                  <div
+                    class="board-circuit-dot board-dot-5 w-2 h-2 absolute"
+                  ></div>
+                  <div
+                    class="board-circuit-dot board-dot-6 w-3 h-3 bg-transparent border border-[#DA2128] rotate-45 rounded-none absolute"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- Floating elements -->
+              <div
+                class="board-circuit-dot board-floating-1 w-4 h-4 bg-transparent border-2 border-[#DA2128] opacity-70 absolute"
+              ></div>
+              <div
+                class="board-circuit-dot board-floating-2 w-3 h-3 opacity-50 absolute"
+              ></div>
+              <div
+                class="board-circuit-dot board-floating-3 w-2 h-2 absolute"
+              ></div>
+              <div
+                class="board-circuit-dot board-floating-4 w-3 h-3 bg-transparent border border-[#DA2128] absolute"
+              ></div>
+              <div
+                class="board-circuit-dot board-floating-5 w-2 h-2 rotate-45 rounded-none absolute"
+              ></div>
+              <div
+                class="board-circuit-dot board-floating-6 w-3 h-3 bg-transparent border-2 border-[#DA2128] opacity-60 absolute"
+              ></div>
+              <div
+                class="board-circuit-dot board-floating-7 w-2 h-2 absolute"
+              ></div>
+              <div
+                class="board-circuit-dot board-floating-8 w-4 h-4 bg-transparent border border-[#DA2128] rotate-45 rounded-none opacity-70 absolute"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-[#151515]">
+      <div
+        class="max-w-screen-2xl h-[75px] mx-auto grid grid-cols-12 px-[106px]"
+      >
+        <div class="col-span-4 flex flex-row gap-x-1 items-center">
+          <!-- <span class="text-[#C2C2C2] text-xs font-normal">
+                Website by
+            </span>
+            <span>
+                <img src="images/footer.png">
+            </span>
+            <span class="text-xs font-normal text-[#337ab7] uppercase">
+                K&A
+            </span> -->
+        </div>
+        <div
+          class="col-span-8 flex flex-row text-[#C2C2C2] text-xs font-normal items-center gap-x-3"
+        >
+          <span
+            class="border border-[#929292] border-t-0 border-b-0 border-l-0 h-6 px-3 flex items-center"
+          >
+            jio industrial
+          </span>
+          <span class="flex flex-row gap-x-2">
+            <a
+              href="https://www.jioindustriesltd.com"
+              target="_blank"
+              class="text-white"
+            >
+              www.jioindustriesltd.com
+            </a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  </body>
+</html>
